@@ -5,30 +5,33 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('obraArte', {
     oa_id: {
-        type: DataTypes.UUID,
-        allowNull:false,
-        primariKey: true,
+      type: DataTypes.UUID,
+      allowNull: false,
+      primariKey: true,
     },
     oa_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     oa_descripcion: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     oa_fechaCreacion: {
-        type: DataTypes.DATE,
-        allowNull: true,
+      type: DataTypes.DATE,
+      allowNull: true,
     },
     oa_oculto: {
-        type: DataTypes.STRING,
+      type: DataTypes.STRING,
     },
     oa_likes: {
-        type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
     },
     oa_dislikes: {
-        type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
+    },
+    imagen_obra: {
+      type: DataTypes.STRING,
     },
   });
 };
