@@ -13,6 +13,7 @@ router.get('/obras', (req, res)=> {
     res.render ("obras",)
 })
 
+
 // Configurar los routers
 //Ejemplo: router.use('/auth', authRouter);
 
