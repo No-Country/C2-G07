@@ -9,7 +9,6 @@ router.get('/', (req, res)=> {
 })
 
 
-const router = Router();
 router.get('/obras', (req, res)=> {
     res.render ("obras",)
 })
