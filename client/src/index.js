@@ -4,15 +4,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Auth0Provider } from "@auth0/auth0-react";
-import credencial from './credencial.json';
-
-console.log(credencial[0].AUTH0_DOMAIN);
+const{REACT_APP_AUTH0_CLIENT_ID, REACT_APP_AUTH0_DOMAIN} = process.env
 
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-      domain={credencial[0].AUTH0_DOMAIN}
-      clientId={credencial[0].AUTH0_CLIENT_ID}
+      domain={REACT_APP_AUTH0_DOMAIN}
+      clientId={REACT_APP_AUTH0_CLIENT_ID}
       redirectUri={window.location.origin}
     >
       <App />
