@@ -7,11 +7,10 @@ const router = Router();
 router.get('/', (req, res)=> {
     res.render ("inicio",)
 })
-/*
-const router = Router();
+
 router.get('/obras', (req, res)=> {
     res.render ("obras",)
-})*/
+})
 
 
 // Configurar los routers
