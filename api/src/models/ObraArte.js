@@ -26,9 +26,11 @@ module.exports = (sequelize) => {
     },
     oa_likes: {
       type: DataTypes.INTEGER,
+      defaultValue: 0,
     },
     oa_dislikes: {
       type: DataTypes.INTEGER,
+      defaultValue: 0,
     },
     imagen_obra: {
       type: DataTypes.STRING,

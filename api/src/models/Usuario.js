@@ -9,23 +9,23 @@ module.exports = (sequelize) => {
       allowNull: false,
       primaryKey: true,
     },
-    name: {
+    usuario_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    usuario_email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    token: {
+    usuario_token: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    imagen: {
+    usuario_imagen: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password:{
+    usuario_password:{
       type:DataTypes.STRING,
       allowNull: false,
     },
