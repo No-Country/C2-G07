@@ -1,7 +1,7 @@
-import styles from '../CallToAction/CallToAction.module.css';
+import styles from '../Heading/Heading.module.css' ;
 import paraguas from '../../assets/img/paraguas-col-azul.png';
-
-const CallToAction = () =>{
+import humo from '../../assets/img/A-Cluster-Of-Curling-Pink-.png';
+const Heading = () =>{
     return (
         <section>
             
@@ -11,16 +11,16 @@ const CallToAction = () =>{
                         <h3>Registrate y vas a poder subir tus fotos y tener tu portfolio</h3>
                     </div>
                     <p>Así de simple</p>
-                    <a href='/' className={styles.btn}>
-                        REGISTRATE
+                    <a href='/' className={styles.btnLink}>
+                        REGISTRATE 
                     </a>
                 </article>
                 <aside>
-                    <img src={paraguas} alt='Paraguas con coso azul' />
+                    <img src={humo} alt='humo rosado sin fondo' />
                 </aside>
             
         </section>
     )
 }
 
-export {CallToAction};
+export {Heading};

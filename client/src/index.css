@@ -1,6 +1,6 @@
 :root{
   --background-color: #36333c;
-  --color: ;
+  --color: #fff;
   --font-title:'Nanum Myeongjo', serif;
   --font-text:  'Roboto', sans-serif; 
 }
@@ -12,7 +12,7 @@ html{
 body {
   margin: 0;
   font-family: var(--font-text);
-  
+  color: var(--color);
 }
 
 h1, h2, h3, h4{
@@ -20,3 +20,5 @@ h1, h2, h3, h4{
   letter-spacing:1px;
   font-weight: lighter;
 }
+
+
