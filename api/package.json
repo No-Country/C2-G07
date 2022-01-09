@@ -10,6 +10,7 @@
   "author": "Henry",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
@@ -21,7 +22,9 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "pg": "^8.5.1",
-    "sequelize": "^6.12.5"
+    "sequelize": "^6.12.5",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.12"
   },
   "devDependencies": {
     "chai": "^4.2.0",
