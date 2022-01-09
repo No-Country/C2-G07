@@ -1,4 +1,4 @@
-import styles from '../Heading/Heading.module.css' ;
+import styles from './Hero.module.css' ;
 import paraguas from '../../assets/img/paraguas-col-azul.png';
 import humo from '../../assets/img/A-Cluster-Of-Curling-Pink-.png';
 const Hero = () =>{
