@@ -5,11 +5,11 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('rol', {
       rol_id: {
-          type: DataTypes.UUID,
+          type: DataTypes.INTEGER,
           allowNull: false,
           primaryKey: true,
       },
-    descripcion: {
+    rol_descripcion: {
       type: DataTypes.STRING,
       allowNull: false,
     },
