@@ -8,4 +8,4 @@ router.get('/categorias', async(req, res, next) =>{
     let categoria = await Categoria.findAll()
     res.json(categoria)
 })
-
+module.exports = router;
