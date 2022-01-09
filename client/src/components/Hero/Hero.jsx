@@ -1,7 +1,7 @@
 import styles from '../Heading/Heading.module.css' ;
 import paraguas from '../../assets/img/paraguas-col-azul.png';
 import humo from '../../assets/img/A-Cluster-Of-Curling-Pink-.png';
-const Heading = () =>{
+const Hero = () =>{
     return (
         <section>
             
@@ -23,4 +23,4 @@ const Heading = () =>{
     )
 }
 
-export {Heading};
+export { Hero };

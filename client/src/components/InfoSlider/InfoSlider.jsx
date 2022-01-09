@@ -1,6 +1,6 @@
-import styles from '../HeadingInfo/HeadingInfo.modules.css'
+import styles from '../InfoSlider/InfoSlider.modules.css'
 
-const HeadingInfo = () =>{
+const InfoSlider = () =>{
     return(
         <div class="accordion">
             <ul>
@@ -41,4 +41,4 @@ const HeadingInfo = () =>{
     )
 }
 
-export { HeadingInfo };
+export { InfoSlider };
