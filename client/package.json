@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.8.0",
+    "nodemon": "^2.0.15",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.3.1",
