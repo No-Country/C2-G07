@@ -7,13 +7,10 @@ async function createData(){
     ]
 
    const categoria =[
-       {cat_id: 1, cat_descripcion: "Realismo"},
-       {cat_id: 2, cat_descripcion: "Hiperrealismo"},
-       {cat_id: 3, cat_descripcion: "Surrealismo"},
-       {cat_id: 4, cat_descripcion: "Impresionismo"},
-       {cat_id: 5, cat_descripcion: "Expresionismo"},
-       {cat_id: 6, cat_descripcion: "Arte abstracto"},
-       {cat_id: 7, cat_descripcion: "Arte Pop"},
+       {cat_id: 1, cat_descripcion: "fotografia"},
+       {cat_id: 2, cat_descripcion: "pintura"},
+       {cat_id: 3, cat_descripcion: "escultura"},
+       {cat_id: 4, cat_descripcion: "arte digital"},  
    ]
 
     return {roles, categoria}

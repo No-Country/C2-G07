@@ -28,11 +28,7 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
-    oa_dislikes: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0,
-    },
-    imagen_obra: {
+    oa_imagen_obra: {
       type: DataTypes.STRING,
     },
   });

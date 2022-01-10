@@ -5,7 +5,6 @@ const { Usuario, Rol } = require("../db");
 const router = Router();
 
 router.get("/usuario", async (req, res, next) => {
-  console.log(req.query.id);
   let usuario = await Usuario.findByPk(req.query.id);
   res.json(usuario);
 });
@@ -29,7 +28,7 @@ router.post("/usuario", async (req, res, next) => {
       usuario_password,
     });
      console.log(rol_id)
-     //↓ asigno rol
+     //↓ asigno rol (si no funciona con set probar con add por ejemplo: addRol en vez de setRol)
     await nuevoUsuario.setRol(rol_id)
     res.json(nuevoUsuario);
   } catch (err) {
