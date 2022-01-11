@@ -4,6 +4,8 @@ const { Router } = require('express');
 
 const usuario = require('./usuario')
 const obraArte = require('./obraArte')
+const categoria = require('./categoria')
+
 
 const router = Router();
 
@@ -11,5 +13,6 @@ const router = Router();
 //Ejemplo: router.use('/auth', authRouter);
 router.use('/', usuario)
 router.use('/', obraArte)
+router.use('/', categoria)
 
 module.exports = router;

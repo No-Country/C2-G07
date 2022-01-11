@@ -1,11 +1,14 @@
 const { Router } = require("express");
 const { v4: uuidv4 } = require("uuid");
-const { Usuario, Rol } = require("../db");
+const { Usuario, Rol, ObraArte } = require("../db");
 
 const router = Router();
 
 router.get("/usuario", async (req, res, next) => {
-  let usuario = await Usuario.findByPk(req.query.id);
+  //let usuario = await Usuario.findByPk(req.query.id);
+  let usuario = await Usuario.findAll({
+    include: {model: ObraArte}
+  })
   res.json(usuario);
 });
 
