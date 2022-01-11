@@ -27,7 +27,7 @@ router.post("/usuario", async (req, res, next) => {
       usuario_imagen,
       usuario_password,
     });
-     console.log(rol_id)
+     
      //↓ asigno rol (si no funciona con set probar con add por ejemplo: addRol en vez de setRol)
     await nuevoUsuario.setRol(rol_id)
     res.json(nuevoUsuario);
