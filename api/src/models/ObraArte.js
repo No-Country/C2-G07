@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     oa_descripcion: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1700),
       allowNull: true,
     },
     oa_fechaCreacion: {
