@@ -1,0 +1,40 @@
+button {
+    background: none;
+    border: 2px solid var(--color);
+    font-family:'Roboto', serif;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 10px 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+
+.btnDanger{
+    --color: #e71d36;
+    --hover: #a12534;
+    background: linear-gradient(60deg, transparent 50%, var(--color) 50%);
+    background-size: 300%;
+    background-position: 0 0;
+    transition: background-position 1s, color 1s;
+    
+}
+
+.btnDanger:hover {
+    background-position: 100% 0;
+    color: black;
+    border-color: var(--hover);
+    cursor: pointer;
+    
+}
+
+
+
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+   }
+}

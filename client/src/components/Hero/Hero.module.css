@@ -17,6 +17,12 @@ article{
     align-self: center;
 }
 
+article >p{
+    margin-top: 0;
+    text-align: end;
+    font-size: 20px;
+}
+
 .titles{
     display:flex;
     flex-direction: column;

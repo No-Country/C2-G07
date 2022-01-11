@@ -1,0 +1,34 @@
+
+.btnLink{
+    --color:#36333c ;
+    --hover: #E5FFDE;
+    --boder-color:#fe9f02;
+    display: inline-block;
+    border:2px solid var(--boder-color);
+    font-size: 20px;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 10px 15px;
+    background-image: linear-gradient(45deg, var(--color) 50%, var(--hover) 50%);
+    background-size: 250% 100%;
+    background-position: left top;
+    transition: background-position .5s ease;
+   
+}
+
+.btnLink > p {
+    margin:2px;
+    padding: 0;
+}
+
+.btnLink:hover {
+    color: var(--color);
+    cursor: pointer;
+    background-position: right bottom;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+   }
+}

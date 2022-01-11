@@ -15,12 +15,22 @@ body {
   color: var(--color);
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5, h6{
   font-family: var(--font-title);
   letter-spacing:1px;
   font-weight: lighter;
 }
 
-
+button {
+  background: none;
+  border: 2px solid var(--color);
+  font-family:'Roboto', serif;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 10px 15px;
+  color: white;
+  transition: 0.3s;
+}
 
 

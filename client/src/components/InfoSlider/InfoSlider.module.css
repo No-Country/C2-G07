@@ -24,11 +24,11 @@
     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.wunderstock.com/Woman-Portrait-Illustration_3fE5Rw34mkJV_800.jpeg");
   }
   .accordion ul li:nth-child(3) {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://live.staticflickr.com/65535/49780360687_2058bfff23_c.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.lifeofpix.com/wp-content/uploads/2020/02/XAVARAO_France-6001-1600x2000.jpg");
   }
 
   .accordion ul li:nth-child(4) {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.wunderstock.com/Soap-Bubbles-Surrounded-By-Light_64vgvSnCJWIG_800.jpeg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.lifeofpix.com/wp-content/uploads/2018/05/pf-mc8-ake07993-ake-1600x1867.jpg");
   }
 
   .accordion ul li::before {

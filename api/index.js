@@ -17,22 +17,20 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const server = require('./src/app.js');
-require('dotenv').config();
-const {v4: uuidv4} = require('uuid')
-const { conn, Categoria, Rol} = require('./src/db.js');
-const { createData } = require('./preloadData.js');
-
-
+const server = require("./src/app.js");
+require("dotenv").config();
+const { v4: uuidv4 } = require("uuid");
+const { conn, Category, Rol } = require("./src/db.js");
+const { createData } = require("./preloadData.js");
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(process.env.PORT, async() => {
-    console.log(`listening at ${process.env.PORT}`); 
+  server.listen(process.env.PORT, async () => {
+    console.log(`listening at ${process.env.PORT}`);
     const datos = await createData();
-    const roles = await Rol.bulkCreate(datos.roles)
-    console.log('**** ROLES CREADOS')
-    const categoria = await Categoria.bulkCreate(datos.categoria)
-    console.log('**** CATEGORIAS CREADAS')
+    const roles = await Rol.bulkCreate(datos.roles);
+    console.log("**** ROLES CREADOS");
+    const categoria = await Category.bulkCreate(datos.categoria);
+    console.log("**** CATEGORIAS CREADAS");
   });
 });
