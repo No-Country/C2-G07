@@ -1,6 +1,7 @@
 import styles from './Hero.module.css' ;
-import paraguas from '../../assets/img/paraguas-col-azul.png';
+
 import humo from '../../assets/img/A-Cluster-Of-Curling-Pink-.png';
+import { ButtonPrimaryLink } from '../ButtonPrimaryLink/ButoonPrimaryLink';
 const Hero = () =>{
     return (
         <section>
@@ -8,12 +9,10 @@ const Hero = () =>{
                 <article>
                     <div className={styles.titles}>
                         <h2 className={styles.mainTitle}> Una Web creada para artistas</h2>
-                        <h3>Registrate y vas a poder subir tus fotos y tener tu portfolio</h3>
+                        <h3>Regístrate y podras subir tus fotos y tener tu portfolio</h3>
                     </div>
                     <p>Así de simple</p>
-                    <a href='/' className={styles.btnLink}>
-                        REGISTRATE 
-                    </a>
+                    <ButtonPrimaryLink name="Registrarse"/>
                 </article>
                 <aside>
                     <img src={humo} alt='humo rosado sin fondo' />
