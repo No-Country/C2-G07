@@ -74,7 +74,7 @@ router.delete('/:oa_id', async (req, res, next)=>{
   const {oa_id} = req.params;
   const oaDelete = await ObraArte.findOne({ioa_id: oa_id});
   if(oaDelete){
-    oaDelete.destoy()
+    oaDelete.destroy()
     .then(()=>
       res
         .status(200)
