@@ -1,6 +1,7 @@
 import { MdOutlineCloseFullscreen } from 'react-icons/md';
 import styles from './MenuMobile.module.css';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 const MenuMobile = ({ toggleMenu }) => {
 	return (
 		<div className={styles.menuMobile}>

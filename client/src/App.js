@@ -3,6 +3,8 @@ import { Header } from './components/Header/Header';
 import { Hero } from './components/Hero/Hero';
 import { InfoSlider } from './components/InfoSlider/InfoSlider';
 import { Footer } from './components/Footer/Footer';
+import React from 'react';
+import ReactDOM from 'react-dom';
 function App() {
 	return (
 		<div className='App'>

@@ -1,5 +1,6 @@
 import styles from './InfoSlider.module.css';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 const InfoSlider = () =>{
     return(
         <div className={styles.accordion}>
