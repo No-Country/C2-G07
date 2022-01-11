@@ -2,13 +2,20 @@ import { RiVipDiamondFill } from 'react-icons/ri';
 import { FaHamburger } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import { MenuMobile } from '../MenuMobile/MenuMobile';
-import styles from './Header.module.css';
+import { LoginBtn } from '../Login-Logout/LoginBtn';
 import { useState } from 'react';
+import { Loader } from '../Loader/Loader';
+import { ProfilePicture } from '../ProfilePicture/ProfilePicture';
+import { useAuth0 } from '@auth0/auth0-react';
+import styles from './Header.module.css';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const { isLoading, isAuthenticated } = useAuth0();
 
 	const toggleMenu = () => setMenuOpen(!menuOpen);
+
+	if (isLoading) return <Loader />;
 
 	return (
 		<header className={styles.header}>
@@ -26,9 +33,7 @@ const Header = () => {
 					<li>Artistas</li>
 					<li>Eventos</li>
 				</ul>
-				<a href='/' className={styles.loginBtn}>
-					Login / Sign up
-				</a>
+				{isAuthenticated ? <ProfilePicture /> : <LoginBtn />}
 			</nav>
 			{menuOpen && <MenuMobile toggleMenu={toggleMenu} />}
 		</header>
