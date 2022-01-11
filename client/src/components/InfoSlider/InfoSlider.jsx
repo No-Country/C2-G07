@@ -1,8 +1,8 @@
-import styles from '../InfoSlider/InfoSlider.modules.css'
+import styles from './InfoSlider.module.css';
 
 const InfoSlider = () =>{
     return(
-        <div class="accordion">
+        <div className={styles.accordion}>
             <ul>
                 <li>
                     <a href="#">
