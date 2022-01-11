@@ -1,0 +1,10 @@
+.loginBtn {
+	padding: 0.6rem 1.2rem;
+	background-color: orange;
+	color: white;
+	border: 1px solid transparent;
+}
+
+.logoutBtn {
+	font-weight: 500;
+}
