@@ -19,8 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require("./src/app.js");
 require("dotenv").config();
-const { v4: uuidv4 } = require("uuid");
-const { conn, Category, Rol } = require("./src/db.js");
+const { conn, Category, Rol, Usuario, ObraArte} = require("./src/db.js");
 const { createData } = require("./preloadData.js");
 
 // Syncing all the models at once.
@@ -32,5 +31,9 @@ conn.sync({ force: true }).then(() => {
     console.log("**** ROLES CREADOS");
     const categoria = await Category.bulkCreate(datos.categoria);
     console.log("**** CATEGORIAS CREADAS");
+    const usuario = await Usuario.bulkCreate(datos.usuario);
+    console.log("**** USUARIOS CREADOS");
+    const obraArte = await ObraArte.bulkCreate(datos.obraArte)
+    console.log("**** OBRA DE ARTES CREADAS")
   });
 });
