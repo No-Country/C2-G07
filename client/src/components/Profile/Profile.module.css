@@ -1,0 +1,70 @@
+.container {
+	background-color: black;
+	position: absolute;
+	opacity: 1;
+	transform: none;
+	transition: opacity 274ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+		transform 182ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	top: 64px;
+	right: 34px;
+	transform-origin: 260px 0px;
+	padding: 12px;
+	min-width: 16.25rem;
+	border: 1px solid #e3e4e6;
+	box-shadow: 0px 33px 80px rgb(0 0 0 / 7%),
+		0px 13.7866px 33.4221px rgb(0 0 0 / 5%),
+		0px 7.37098px 17.869px rgb(0 0 0 / 4%),
+		0px 4.13211px 10.0172px rgb(0 0 0 / 4%),
+		0px 2.19453px 5.32008px rgb(0 0 0 / 3%),
+		0px 0.913195px 2.21381px rgb(0 0 0 / 2%);
+	max-height: calc(100% - 96px);
+	border-radius: 8px;
+	-webkit-overflow-scrolling: touch;
+}
+
+.profileInfo {
+	padding: 6px 12px;
+	display: flex;
+	align-items: center;
+}
+
+.profileContainer {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+}
+
+.profileContainer img {
+	border-radius: 50%;
+	margin-right: 16px;
+	height: 52px;
+	width: 52px;
+	object-fit: cover;
+}
+
+.userInfo h3 {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.userInfo p {
+	font-size: 300;
+	font-size: 14px;
+}
+
+.divider {
+	border: none;
+	height: 1px;
+	margin: 8px;
+	flex-shrink: 0;
+	background-color: #e3e4e6;
+}
+
+.container button:hover {
+	background-color: beige;
+	border-radius: 8px;
+	padding: 4px 8px;
+	border: 1px solid transparent;
+}
