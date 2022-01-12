@@ -1,0 +1,7 @@
+.gridObrasArte {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
+}
