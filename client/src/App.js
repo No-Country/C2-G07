@@ -5,16 +5,16 @@ import { Landing } from './views/Landing/Landing';
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Footer } from './components/Footer/Footer';
 function App() {
 	return (
 		<div className='App'>
 			<Header />
-
 			<Routes>
 				<Route exact path="/"  element={<Landing />}/>
 				<Route path="/galeria" element={<Home />} />
-				
 			</Routes>
+			<Footer/>
 		</div>
 	);
 }
