@@ -1,6 +1,7 @@
 :root{
   --background-color: #36333c;
   --color: #fff;
+  --color-contraste1:#fe9f02;
   --font-title:'Nanum Myeongjo', serif;
   --font-text:  'Roboto', sans-serif; 
 }

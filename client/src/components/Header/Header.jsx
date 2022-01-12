@@ -26,7 +26,7 @@ const Header = () => {
 		<header className={styles.header}>
 			<IconContext.Provider value={{ color: 'orange' }}>
 				<h2>
-					<Link to="/"> conectARTE <RiVipDiamondFill /> </Link>
+					<Link to="/" className={styles.link}> ConectARTE <RiVipDiamondFill /> </Link>
 				</h2>
 			</IconContext.Provider>
 			<div className={styles.burgerIcon} onClick={toggleMenu}>
@@ -34,8 +34,8 @@ const Header = () => {
 			</div>
 			<nav>
 				<ul className={styles.menuDesktop}>
-					<li><Link to="/galeria">Galería</Link></li>
-					<li>Artistas</li>
+					<li><Link to="/galeria" className={styles.link}>Galería</Link></li>
+					<li><Link to="/usuarios" className={styles.link}>Artistas</Link></li>
 					<li>Eventos</li>
 				</ul>
 				{isAuthenticated ? <ProfilePicture /> : <LoginBtn />}
