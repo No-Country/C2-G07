@@ -28,6 +28,7 @@ export default function Home(){
 							imagen={oa.oa_imagen_obra}
 							imagenUsuario={oa.usuario.usuario_imagen}
 							nameAutor = {oa.usuario.usuario_name}
+							idUsuario={oa.usuario.usuario_id}
 						/>
 					))
 				):null}

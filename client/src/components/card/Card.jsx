@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+// import {Link} from "react-router-dom"
 
 
 export const Cards = ({
@@ -19,6 +20,7 @@ export const Cards = ({
   likes,
   imagenUsuario,
   nameAutor,
+  idUsuario
 }) => {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -39,11 +41,19 @@ export const Cards = ({
       <Card sx={{ maxWidth: 345 }}>
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+              <div>
+                  <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
               <img src={imagenUsuario} alt="usuario" width="50" />
-            </Avatar>
+                </Avatar>
+                {/* <Link to={`/usuario/${idUsuario}`}>
+                    <p>{nameAutor}</p>
+                </Link> */}
+                
+              </div>
+            
+            
           }
-          title={name + " creado por " + nameAutor + " el"}
+          title={name}
           subheader={formatDate(date)}
         />
         <CardMedia
