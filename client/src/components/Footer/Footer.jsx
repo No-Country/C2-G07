@@ -14,7 +14,7 @@ const Footer = () => {
 			<div className={styles.container}>
 				<div className={styles.footerInfo}>
 					<div className={styles.infoAbout}>
-						<h6>About</h6>
+						<h6>Nosotros</h6>
 						<p className={styles.textJustify}>
 							conectARTE.com <i>ARTE PARA TODOS</i> Lorem ipsum, dolor sit amet
 							consectetur adipisicing elit. Voluptatum, tenetur reprehenderit
@@ -27,7 +27,7 @@ const Footer = () => {
 						</p>
 					</div>
 					<div>
-						<h6>Categories</h6>
+						<h6>Categorías</h6>
 						<ul className={styles.footerLinks}>
 							<li>
 								<a href='/'>Pintura</a>
@@ -47,7 +47,7 @@ const Footer = () => {
 						</ul>
 					</div>
 					<div>
-						<h6>Quick Links</h6>
+						<h6>Links de interés</h6>
 						<ul className={styles.footerLinks}>
 							<li>
 								<a href='http://scanfcode.com/contact/'>Contactanos</a>
