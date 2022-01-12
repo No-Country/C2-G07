@@ -1,0 +1,27 @@
+.btnSuccess{
+    --color: #8fc866;
+    --hover: #66c887;
+    background: linear-gradient(60deg, transparent 50%, var(--color) 50%);
+    background-size: 300%;
+    background-position: 0 0;
+    transition: background-position 1s, color 1s;
+    
+}
+
+.btnSuccess:hover {
+    background-position: 100% 0;
+    color: black;
+    border-color: var(--hover);
+    cursor: pointer;
+    
+}
+
+
+
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+   }
+}

@@ -1,17 +1,14 @@
 import './App.css';
-import { Login } from './components/Login-Logout/Login';
-import { Logout } from './components/Login-Logout/Logout';
+import { Header } from './components/Header/Header';
+import { Landing } from './views/Landing/Landing';
 
 function App() {
-  let a = false
-  return (
-    <div className="App">
-      <h1>Obras de Arte</h1>
-     <Login/>  <Logout/>
-     
-     
-    </div>
-  );
+	return (
+		<div className='App'>
+			<Header />
+			<Landing />
+		</div>
+	);
 }
 
 export default App;
