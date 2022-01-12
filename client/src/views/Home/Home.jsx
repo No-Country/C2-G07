@@ -3,7 +3,8 @@ import { useEffect , useState} from 'react';
 import{ useSelector, useDispatch } from 'react-redux';
 import { Cards } from '../../components/card/Card';
 import styles from './Home.module.css';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 export default function Home(){
 	const obrasArtes = useSelector((state) => state.obraArtes)
 	const [order, setOrder] = useState('asc')
