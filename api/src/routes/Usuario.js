@@ -38,5 +38,19 @@ router.post("/usuario", async (req, res, next) => {
     next(err);
   }
 });
-
+router.delete('/:usuario_id', async (req, res, next) => {
+  const { usuario_id } = req.params;
+  const usuDelete = await Usuario.findOne({ us_id: usuario_id });
+  if (usuDelete) {
+    usuDelete.destroy()
+      .then(() =>
+        res
+          .status(200)
+          .json({ message: `Usuario eliminado` })
+      )
+      .catch((err) => next(err))
+  } else {
+    res.status(404).json({ message: `El usuario no existe en la BD` })
+  }
+})
 module.exports = router;
