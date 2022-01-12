@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import {getObrasArtes} from '../../redux/actions/index'
-import { useEffect , useState} from 'react'
-import{ useSelector, useDispatch } from 'react-redux';
-import { Cards } from '../../components/card/Card';
-import styles from './Home.module.css'
-=======
 import {getObrasArtes} from '../../redux/actions/index';
 import { useEffect , useState} from 'react';
 import{ useSelector, useDispatch } from 'react-redux';
 import { Cards } from '../../components/card/Card';
 import styles from './Home.module.css';
->>>>>>> views
 
 export default function Home(){
 	const obrasArtes = useSelector((state) => state.obraArtes)
