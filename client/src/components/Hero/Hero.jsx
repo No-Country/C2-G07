@@ -1,5 +1,6 @@
 import styles from './Hero.module.css' ;
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 import humo from '../../assets/img/A-Cluster-Of-Curling-Pink-.png';
 import { ButtonPrimaryLink } from '../ButtonPrimaryLink/ButoonPrimaryLink';
 const Hero = () =>{

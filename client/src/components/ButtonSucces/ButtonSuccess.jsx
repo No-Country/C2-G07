@@ -1,5 +1,6 @@
 import styles from './ButtonSuccess.module.css';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 const ButtonSuccess = ({name}) =>{
     return (
         <div >

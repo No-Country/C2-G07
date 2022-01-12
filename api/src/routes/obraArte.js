@@ -9,7 +9,8 @@ router.get("/obraArte", async (req, res, next) => {
   let { name } = req.query; //este valor es el que viene del front   //localhost:3001/obraArte?name=va_el valor_a_buscar
   if (!name) {
     let obraArte = await ObraArte.findAll({
-      order:[['oa_name',req.query.order]]
+      order:[['oa_name',req.query.order]],
+      include: {model: Usuario}
     });
     res.json(obraArte);
   } else {
