@@ -6,7 +6,6 @@ const Landing = () => {
 		<>
 			<Hero />
 			<InfoSlider />
-			<Footer />
 		</>
 	);
 };
