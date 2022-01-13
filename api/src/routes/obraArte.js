@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const { v4: uuidv4 } = require("uuid");
-const { ObraArte, Usuario, Categoria } = require("../db");
+const { ObraArte, Usuario, Category } = require("../db");
 const { Op } = require("sequelize");
 
 const router = Router();
@@ -10,12 +10,13 @@ router.get("/obraArte", async (req, res, next) => {
   if (!name) {
     let obraArte = await ObraArte.findAll({
       order:[['oa_name',req.query.order]],
-      include: {model: Usuario}
+      include: [{model: Usuario}, {model:Category}]
     });
     res.json(obraArte);
   } else {
     let obraArte = await ObraArte.findAll({
       where: { oa_name: { [Op.like]: `${name}%` } },
+      include: {model: Usuario}
     });
     res.json(obraArte);
   }

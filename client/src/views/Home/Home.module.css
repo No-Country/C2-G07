@@ -1,7 +1,9 @@
 .gridObrasArte {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
-  gap: 40px;
+  gap: 60px;
   justify-content: center;
   margin-top: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
