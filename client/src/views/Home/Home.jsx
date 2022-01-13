@@ -13,7 +13,6 @@ export default function Home(){
 		distpatch(getObrasArtes(order))
 	}, [distpatch,order])
 
-	console.log(obrasArtes)
 
 	return(
 		<div>
