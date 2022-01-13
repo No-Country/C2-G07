@@ -1,7 +1,7 @@
 import {GET_OBRAS_ARTES, GET_OBRAS_ARTES_NAME} from '../actions/index'
 
 const initalState = {
-    obraArtes:[]
+    obraArtes:[],
 };
 
 export default function rootReducer(state = initalState, action){
