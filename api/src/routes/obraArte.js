@@ -16,6 +16,7 @@ router.get("/obraArte", async (req, res, next) => {
   } else {
     let obraArte = await ObraArte.findAll({
       where: { oa_name: { [Op.like]: `${name}%` } },
+      include: {model: Usuario}
     });
     res.json(obraArte);
   }
