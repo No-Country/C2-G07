@@ -16,7 +16,7 @@ export const SearchBar = () => {
     if (obra === "") {
       dispatch(getObrasArtes("asc"));
     }
-  }, [dispatch, obra])
+  }, [dispatch, obra]);
 
   function handleChangeNombreObra(e){
     setOrder(e.target.value);
