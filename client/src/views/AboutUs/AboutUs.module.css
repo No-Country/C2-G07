@@ -1,0 +1,124 @@
+.intro {
+	font-size: 1.15rem;
+	margin-bottom: 2.5em;
+}
+
+.main-grid {
+	display: grid;
+	grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+	grid-column-gap: 2em;
+}
+
+.main {
+	background-color: #fff;
+	color: #000;
+	grid-column: 2 /-2;
+	padding: 1.2rem;
+}
+
+.head {
+	grid-column: 2 / -2;
+	text-align: center;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+.pageTitle {
+	color: #000;
+	font-size: 2.5rem;
+	justify-self: center;
+	font-weight: 700;
+	font-size: 1.75rem;
+	margin-bottom: 48px;
+}
+
+.imgContainer {
+	display: grid;
+	place-content: center;
+	margin-bottom: 4rem;
+}
+
+.mainImage {
+	max-width: 100%;
+	aspect-ratio: 1 / 1;
+	box-shadow: 10px 10px 250px #000;
+	border-radius: 12px;
+}
+
+.mainText {
+	grid-column: 2 / -2;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+.sectionTitle {
+	font-weight: 700;
+	color: #000;
+	font-size: 1.75rem;
+}
+
+.sectionTitle::after {
+	content: '';
+	display: block;
+	width: 100px;
+	height: 3px;
+	margin-top: 10px;
+	background: orange;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sub {
+	margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+	.main-grid {
+		grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(20px, 320px)) minmax(
+				1em,
+				1fr
+			);
+	}
+
+	.head {
+		grid-column: 3 / -3;
+	}
+
+	.pageTitle::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 5px;
+		background: orange;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 10px;
+	}
+
+	.mainImage {
+		grid-column: 2;
+		margin-top: 1.3em;
+	}
+
+	.mainText {
+		grid-column: 3 / span 2;
+		margin-top: 0;
+	}
+
+	.sectionTitle::after {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 700px) {
+	.pageTitle::after {
+		content: '';
+		display: block;
+		width: 160px;
+		height: 5px;
+		background: orange;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 10px;
+	}
+}
