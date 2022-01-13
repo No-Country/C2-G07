@@ -1,7 +1,7 @@
 import { getObrasArtes } from '../../redux/actions/index';
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Cards } from '../../components/card/Card';
+import { Cards } from '../../components/Card/Card';
 import styles from './Home.module.css';
 
 export default function Home() {
