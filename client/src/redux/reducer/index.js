@@ -1,24 +1,35 @@
-import {GET_OBRAS_ARTES, GET_OBRAS_ARTES_NAME} from '../actions/index'
+import {
+  GET_OBRAS_ARTES,
+  GET_OBRAS_ARTES_NAME,
+  GET_PERFIL_USUARIO,
+} from "../actions/index";
 
 const initalState = {
-    obraArtes:[],
+  obraArtes: [],
+  usuario: {},
 };
 
-export default function rootReducer(state = initalState, action){
-    if(action.type === GET_OBRAS_ARTES){
-        return{
-            ...state,
-            obraArtes: action.payload,
-        }
-    }
+export default function rootReducer(state = initalState, action) {
+  if (action.type === GET_OBRAS_ARTES) {
+    return {
+      ...state,
+      obraArtes: action.payload,
+    };
+  }
 
-    if (action.type === GET_OBRAS_ARTES_NAME) {
-        return {
-          ...state,
-          obraArtes: action.payload,
-        };
-      }
+  if (action.type === GET_OBRAS_ARTES_NAME) {
+    return {
+      ...state,
+      obraArtes: action.payload,
+    };
+  }
 
+  if (action.type === GET_PERFIL_USUARIO) {
+    return {
+      ...state,
+      usuario: action.payload,
+    };
+  }
 
-    return state
+  return state;
 }
