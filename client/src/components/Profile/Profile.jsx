@@ -1,6 +1,7 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { LogoutBtn } from '../Login-Logout/LogoutBtn';
 import styles from './Profile.module.css';
+import React from 'react';
 
 const Profile = () => {
 	const { user } = useAuth0();
