@@ -5,6 +5,7 @@ import { Landing } from './views/Landing/Landing';
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import { Footer } from './components/Footer/Footer';
+import { PerfilUsuario } from './views/PerfilUsuario/PerfilUsuario';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 			<Routes>
 				<Route exact path='/' element={<Landing />} />
 				<Route path='/galeria' element={<Home />} />
+				<Route path='/usuario/:id' element={<PerfilUsuario/>}/>
 			</Routes>
 			<Footer />
 		</div>

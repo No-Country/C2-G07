@@ -1,7 +1,7 @@
 import styles from './ButtonSuccess.module.css';
 import React from 'react';
 
-const ButtonSuccess = ({ name }) => {
+export const ButtonSuccess = ({ name }) => {
 	return (
 		<div>
 			<button className={styles.btnSuccess} type='submit'>
@@ -11,4 +11,4 @@ const ButtonSuccess = ({ name }) => {
 	);
 };
 
-export { ButtonSuccess };
+

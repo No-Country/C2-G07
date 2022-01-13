@@ -16,7 +16,6 @@ export const Cards = ({
   id
 }) => {
 
-  console.log(nameAutor)
   var date = new Date(fecha);
   const formatDate = (date) => {
     let formatted_date =
@@ -24,7 +23,6 @@ export const Cards = ({
     return formatted_date;
   };
 
-  console.log(formatDate(date));
   return (
     <li className={styles.container}>
       <div className={styles.containerImg}>
