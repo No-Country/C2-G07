@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Cards } from "../../components/card/Card";
 import { getPerfilUsuario, getObrasArtesUsuario } from "../../redux/actions";
 import { ButtonPrimaryLink } from "../../components/ButtonPrimaryLink/ButoonPrimaryLink";
+import {Link} from "react-router-dom"
 import styles from "./PerfilUsuario.module.css";
 
 export const PerfilUsuario = () => {
@@ -21,22 +22,29 @@ export const PerfilUsuario = () => {
   }, [id, distpatch]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <span className={styles.containerInfo}>
-        <h2>{usuario.usuario_name}</h2>
-
-        <div>
-          <img src={usuario.usuario_imagen} alt="usuario" width={200} />
-          <ButtonPrimaryLink name={"Enviar Mensaje"} />
+        <div className={styles.containerUsuario}>
+          <img
+            src={usuario.usuario_imagen}
+            alt="usuario"
+            className={styles.imagenPerfil}
+          />
         </div>
-        <h4>Contacto</h4>
-        <p>Email: {usuario.usuario_email}</p>
-        <p>Redes Sociales: </p>
-        <p>Telefono: +5438889999999 </p>
-        {/* <button>Enviar Mensaje</button> */}
+        <div className={styles.contacto}>
+           <div className={styles.editPerfil}>
+           <h1>{usuario.usuario_name}</h1>
+            <Link to='/editPerfil' className={styles.button}>Editar Perfil</Link>
+           </div>
+            <h3>{obrasArtes.length} Publicaciones</h3>
+          <h4>Contacto</h4>
+          <p>Email: {usuario.usuario_email}</p>
+          <p>Redes Sociales: </p>
+          <p>Telefono: +5438889999999 </p>
+        </div>
       </span>
-      <span>
-        <h2>OBRAS REALIZADAS</h2>
+      <span >
+        <h2 className={styles.title}>OBRAS REALIZADAS</h2>
         <ul className={styles.gridObrasArte}>
           {obrasArtes.length > 0
             ? obrasArtes.map((oa, index) => (
