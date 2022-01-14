@@ -4,7 +4,10 @@ export const GET_OBRAS_ARTES = "GET_OBRAS_ARTES";
 export const GET_OBRAS_ARTES_NAME = "GET_OBRAS_ARTES_NAME";
 export const GET_PERFIL_USUARIO = "GET_PERFIL_USUARIO";
 export const GET_OBRAS_USUARIO = "GET_OBRAS_USUARIO";
-export const GET_USUARIOS = "Get_USUARIOS";
+export const GET_USUARIOS = "GET_USUARIOS";
+export const GET_INFORMACION_OBRA_ARTE = "GET_INFORMACION_OBRA_ARTE"
+
+
 export const getObrasArtes = (order)=>{
     return async function(distpach){
         try{
@@ -65,6 +68,7 @@ export function getObrasArtesUsuario(usuarioId){
     }
 }
 
+
 export const getUsuarios = (order)=>{
     return async function(distpach){
         try{
@@ -76,6 +80,22 @@ export const getUsuarios = (order)=>{
         }catch (error){
             console.log(error);
         }
+    }
+}
+
+export function getInformacionObraArte(id){
+    return async function(distpach){
+        try{
+           const response =  await axios.get(`${REACT_APP_URL_API}/obraArte/${id}`)
+           distpach({
+               type: GET_INFORMACION_OBRA_ARTE,
+               payload: response.data
+           })
+        }catch(error){
+            console.log(error);
+        }
+        
+
     }
 }
 

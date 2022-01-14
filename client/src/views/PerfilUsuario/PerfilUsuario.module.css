@@ -32,7 +32,7 @@
   }
 
   .imagenPerfil{
-    width: 250px;
+    max-height: 200px;
     border-radius: 100px;
     border: 5px solid #fe9f02
   }
