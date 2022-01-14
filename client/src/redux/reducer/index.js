@@ -15,7 +15,7 @@ const initalState = {
    usuario: {},
    obrasUsuario:[],
    obraArte:{},
-   categorias:[]
+   categorias:[],
    usuarios:[],
 
 };
