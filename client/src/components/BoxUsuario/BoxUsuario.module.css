@@ -1,0 +1,31 @@
+.container{
+    
+    margin:25px;
+    align-self: center;
+}
+
+.container:hover{
+    cursor:pointer;
+}
+
+.imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imagen :nth-child(1){
+    align-self: center;
+}
+
+.link{
+    color:var(--color);
+}
+
+.link:visited{
+    color:var(--color);
+}
+
+.link:hover{
+    color: var(--color-contraste1);
+}

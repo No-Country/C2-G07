@@ -4,7 +4,10 @@ import {
   GET_PERFIL_USUARIO,
   GET_OBRAS_USUARIO,
   GET_INFORMACION_OBRA_ARTE,
-  GET_CATEGORIA
+  GET_CATEGORIA,
+  GET_USUARIOS,
+
+
 } from "../actions/index";
 
 const initalState = {
@@ -13,6 +16,8 @@ const initalState = {
    obrasUsuario:[],
    obraArte:{},
    categorias:[]
+   usuarios:[],
+
 };
 
 export default function rootReducer(state = initalState, action) {
@@ -44,6 +49,12 @@ export default function rootReducer(state = initalState, action) {
     };
   }
 
+  if (action.type === GET_USUARIOS) {
+    return{
+      ...state,
+      usuarios: action.payload,
+    };
+  }
   if (action.type === GET_INFORMACION_OBRA_ARTE) {
     return {
       ...state,
