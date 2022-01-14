@@ -7,7 +7,7 @@ import ShareIcon from "@mui/icons-material/Share";
 
 export const Cards = ({
   name,
-  reseña,
+  resenia,
   fecha,
   imagen,
   likes,
@@ -29,7 +29,7 @@ export const Cards = ({
         </Link>
       </div>
       <p>
-        {reseña}{" "}
+        {resenia}{" "}
         <Link to={"/obraArte/"+id} className={styles.link}>
           Ver mas...
         </Link>

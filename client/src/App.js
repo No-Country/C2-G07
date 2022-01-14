@@ -8,6 +8,7 @@ import React from 'react';
 import { Footer } from './components/Footer/Footer';
 import { PerfilUsuario } from './views/PerfilUsuario/PerfilUsuario';
 import { InformacionObraArte } from './views/informacionObraArte/InformacionObraArte';
+import { AgregarObraArte } from './views/AgregarObraArte/AgregarObraArte';
 
 function App() {
 	return (
@@ -20,8 +21,10 @@ function App() {
 				<Route path='/usuario/:id' element={<PerfilUsuario/>}/>
 				<Route path='/obraArte/:id' element={<InformacionObraArte/>}/>
 				<Route path='/aboutUs' element={<AboutUs />} />
+				<Route path='/nuevaObraArte' element={<AgregarObraArte/>}/>
 			</Routes>
 			<Footer />
+			
 		</div>
 	);
 }
