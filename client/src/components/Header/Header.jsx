@@ -44,6 +44,11 @@ const Header = () => {
 							Artistas
 						</Link>
 					</li>
+					<li>
+						<Link to ="/nuevaObraArte" className={styles.link}>
+							Nueva Obra de Arte
+						</Link>
+					</li>
 					<li>Eventos</li>
 				</ul>
 				{isAuthenticated ? <ProfilePicture /> : <LoginBtn />}

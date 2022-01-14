@@ -23,7 +23,7 @@ export default function Home() {
 								key={index}
 								id={oa.oa_id}
 								name={oa.oa_name}
-								reseña={oa.oa_reseña}
+								reseña={oa.oa_resenia}
 								fecha={oa.oa_fechaCreacion}
 								likes={oa.oa_likes}
 								imagen={oa.oa_imagen_obra}
