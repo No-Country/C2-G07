@@ -16,13 +16,6 @@ export const Cards = ({
   id
 }) => {
 
-  var date = new Date(fecha);
-  const formatDate = (date) => {
-    let formatted_date =
-      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-    return formatted_date;
-  };
-
   return (
     <li className={styles.container}>
       <div className={styles.containerImg}>

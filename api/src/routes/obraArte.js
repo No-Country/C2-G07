@@ -22,6 +22,17 @@ router.get("/obraArte", async (req, res, next) => {
   }
 });
 
+router.get("/obraArte/:id", async (req, res, next) => {
+  try {
+    let obraArte = await ObraArte.findByPk(req.params.id, {
+      include: [{ model: Usuario }, { model: Category }],
+    });
+    res.json(obraArte);
+  } catch (err) {
+    next(err);
+  }
+});
+
 router.get("/obraArteUsuario", async (req, res, next) => {
   try {
     let obrasUsuario = await ObraArte.findAll({

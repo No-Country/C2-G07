@@ -1,0 +1,29 @@
+.containerHeader{
+    margin-left: 30px;
+}
+
+.containerImagenDescripcion{
+    display: flex;
+    width: 100%;
+}
+
+.containerImagen{
+    width: 50%;
+    padding-left: 80px;
+}
+.containerDescripcion{
+    width: 50%;
+    padding-right:  80px;;
+}
+
+.imagen{
+    width: 600px;
+}
+
+.nombreUsuario{
+    color: white;
+}
+
+.nombreUsuario:hover{
+    color: black;
+}
