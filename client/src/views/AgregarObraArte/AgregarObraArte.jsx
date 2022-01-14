@@ -43,7 +43,7 @@ export const AgregarObraArte = () => {
     oa_descripcion: "",
     oa_fechaCreacion: "",
     cat_id: 0,
-    usuario_id: "f511cf09-7874-4497-b554-bde6d80f3359"
+    usuario_id: "8cb57d3a-f98b-48e8-a5fb-81a4cfc511ea"
 
   });
   const dispatch = useDispatch();

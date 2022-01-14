@@ -12,9 +12,9 @@ export const Cards = ({
   fecha,
   imagen,
   likes,
-  nameAutor,
-  idUsuario,
-  id
+  // nameAutor,
+  // idUsuario,
+   id
 }) => {
 
   return (
@@ -25,9 +25,9 @@ export const Cards = ({
 
       <div className={styles.titleContainer}>
         <p className={styles.title}>{name}</p>
-        <Link to={`/usuario/${idUsuario}`} className={styles.link}>
+        {/* <Link to={`/usuario/${idUsuario}`} className={styles.link}>
           <p className={styles.p}>Por {nameAutor}</p>
-        </Link>
+        </Link> */}
       </div>
       <p>
         {resenia}{" "}
