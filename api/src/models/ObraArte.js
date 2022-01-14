@@ -13,7 +13,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    oa_reseña:{
+    oa_resenia:{
       type: DataTypes.STRING(300)
     },
     oa_descripcion: {

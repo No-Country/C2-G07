@@ -9,6 +9,7 @@ import { Footer } from './components/Footer/Footer';
 import { PerfilUsuario } from './views/PerfilUsuario/PerfilUsuario';
 import Usuarios from './views/Usuarios/Usuarios';
 import { InformacionObraArte } from './views/informacionObraArte/InformacionObraArte';
+import { AgregarObraArte } from './views/AgregarObraArte/AgregarObraArte';
 
 function App() {
 	return (
@@ -17,12 +18,15 @@ function App() {
 			<Routes>
 				<Route exact path='/' element={<Landing />} />
 				<Route path='/galeria' element={<Home />} />
-				<Route path='/usuarios' element={<Usuarios />} />
-				<Route path='/usuario/:id' element={<PerfilUsuario />} />
-				<Route path='/obraarte/:id' element={<InformacionObraArte />} />
-				<Route path='/aboutus' element={<AboutUs />} />
+        <Route path='/usuarios' element={<Usuarios />} />
+				<Route path='/usuario/:id' element={<PerfilUsuario/>}/>
+				<Route path='/obraArte/:id' element={<InformacionObraArte/>}/>
+				<Route path='/aboutUs' element={<AboutUs />} />
+				<Route path='/nuevaObraArte' element={<AgregarObraArte/>}/>
+
 			</Routes>
 			<Footer />
+			
 		</div>
 	);
 }

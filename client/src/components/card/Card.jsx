@@ -1,3 +1,4 @@
+
 import styles from "./Card.module.css";
 import { Link } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
@@ -7,7 +8,7 @@ import ShareIcon from "@mui/icons-material/Share";
 
 export const Cards = ({
   name,
-  reseña,
+  resenia,
   fecha,
   imagen,
   likes,
@@ -15,13 +16,6 @@ export const Cards = ({
   idUsuario,
   id
 }) => {
-
-  var date = new Date(fecha);
-  const formatDate = (date) => {
-    let formatted_date =
-      date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-    return formatted_date;
-  };
 
   return (
     <li className={styles.container}>
@@ -36,7 +30,7 @@ export const Cards = ({
         </Link>
       </div>
       <p>
-        {reseña}{" "}
+        {resenia}{" "}
         <Link to={"/obraArte/"+id} className={styles.link}>
           Ver mas...
         </Link>
@@ -54,3 +48,4 @@ export const Cards = ({
     </li>
   );
 };
+
