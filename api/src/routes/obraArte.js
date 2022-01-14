@@ -49,6 +49,7 @@ router.post("/obraArte", async (req, res, next) => {
   try {
     const {
       oa_name,
+      oa_resenia,
       oa_descripcion,
       oa_fechaCreacion,
       oa_imagen_obra,
@@ -56,9 +57,12 @@ router.post("/obraArte", async (req, res, next) => {
       cat_id,
     } = req.body;
 
+    console.log(usuario_id)
+
     let nuevaObra = await ObraArte.create({
       oa_id: uuidv4(),
       oa_name,
+      oa_resenia,
       oa_descripcion,
       oa_fechaCreacion,
       oa_oculto: false,
