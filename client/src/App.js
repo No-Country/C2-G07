@@ -7,11 +7,8 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import { Footer } from './components/Footer/Footer';
 import { PerfilUsuario } from './views/PerfilUsuario/PerfilUsuario';
-<<<<<<< HEAD
 import Usuarios from './views/Usuarios/Usuarios';
-=======
 import { InformacionObraArte } from './views/informacionObraArte/InformacionObraArte';
->>>>>>> 34a169a657fdb2ea2f1636ff233e2ac81b3c8057
 
 function App() {
 	return (
@@ -20,15 +17,10 @@ function App() {
 			<Routes>
 				<Route exact path='/' element={<Landing />} />
 				<Route path='/galeria' element={<Home />} />
-<<<<<<< HEAD
-				<Route path='/usuarios' element={<Usuarios/>}/>
+				<Route path='/usuarios' element={<Usuarios />} />
 				<Route path='/usuario/:id' element={<PerfilUsuario />} />
-=======
-
-				<Route path='/usuario/:id' element={<PerfilUsuario/>}/>
-				<Route path='/obraArte/:id' element={<InformacionObraArte/>}/>
->>>>>>> 34a169a657fdb2ea2f1636ff233e2ac81b3c8057
-				<Route path='/aboutUs' element={<AboutUs />} />
+				<Route path='/obraarte/:id' element={<InformacionObraArte />} />
+				<Route path='/aboutus' element={<AboutUs />} />
 			</Routes>
 			<Footer />
 		</div>
