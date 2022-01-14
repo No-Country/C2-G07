@@ -10,8 +10,8 @@ export const InformacionObraArte = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   let idUsuario = obra.usuario_id;
-    let nombre = obra.usuario.usuario_name;
-  console.log(nombre)
+//     let nombre = obra.usuario.usuario_name;
+//   console.log(nombre)
   useEffect(() => {
     dispatch(getInformacionObraArte(id));
   }, [dispatch, id]);
@@ -28,7 +28,7 @@ export const InformacionObraArte = () => {
       <div className={styles.containerHeader}>
         <h1>{obra.oa_name}</h1>
         <Link to={`/usuario/${idUsuario}`}>
-          <h2 className={styles.nombreUsuario}>{nombre}</h2>
+          <h2 className={styles.nombreUsuario}>Ir al perfil del usuario</h2>
         </Link>
         <h3>Creado el dia {formatDate(date)}</h3>
       </div>
@@ -38,7 +38,7 @@ export const InformacionObraArte = () => {
         </div>
         <div className={styles.containerImagen}>
           <p>Descripcion</p> <p>{obra.oa_descripcion}</p>
-          <p>Categoria: {obra.category.cat_descripcion}</p>
+          <p>Categoria: Categoria Prueba</p>
         </div>
       </div>
       <br />
