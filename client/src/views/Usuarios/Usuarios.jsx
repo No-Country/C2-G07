@@ -2,7 +2,8 @@ import React from 'react';
 import { getUsuarios } from '../../redux/actions/index';
 import { useEffect , useState} from 'react';
 import{ useSelector, useDispatch } from 'react-redux';
-import { Cards } from '../../components/card/Card';
+import { BoxUsuario } from '../../components/BoxUsuario/BoxUsuario';
+import styles from './Usuarios.module.css'
 // import { SearchBar } from '../../components/SearchBar/SearchBar';
 
 export default function Usuarios(){
@@ -15,20 +16,19 @@ export default function Usuarios(){
 	}, [distpatch,order])
 
     return (
-        <article>
-            <ul >
+        <article className={styles.container}>
+            
 				{usuarios.length>0?(
 					usuarios.map((user, index)=>(
-						<Cards
+						<BoxUsuario 
 							key={index}
 							id={user.usuario_id}
 							name={user.usuario_name}
-							email={user.usuario_email}
 							usuarioImagen={user.usuario_imagen}
 						/>
 					))
 				):null}
-			</ul>
+			
         </article>
     )
 }
