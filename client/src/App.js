@@ -17,10 +17,10 @@ function App() {
 			<Routes>
 				<Route exact path='/' element={<Landing />} />
 				<Route path='/galeria' element={<Home />} />
-				<Route path='/usuarios' element={<Usuarios/>}/>
+				<Route path='/usuarios' element={<Usuarios />} />
 				<Route path='/usuario/:id' element={<PerfilUsuario />} />
-				<Route path='/obraArte/:id' element={<InformacionObraArte/>}/>
-				<Route path='/aboutUs' element={<AboutUs />} />
+				<Route path='/obraarte/:id' element={<InformacionObraArte />} />
+				<Route path='/aboutus' element={<AboutUs />} />
 			</Routes>
 			<Footer />
 		</div>
