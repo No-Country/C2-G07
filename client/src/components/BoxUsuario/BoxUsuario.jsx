@@ -11,7 +11,7 @@ export const BoxUsuario = ({
   
     return (
       <div className={styles.container}>
-          <Link to={`/usuarios/${id}`} className={styles.link}>
+          <Link to={`/usuario/${id}`} className={styles.link}>
             <div className={styles.imagen}>
                 <Avatar 
                     alt={"Foto de perfil de "+name}
