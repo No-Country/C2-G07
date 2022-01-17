@@ -21,7 +21,7 @@ router.get("/usuario/:id", async (req, res, next) => {
   }catch(err){
     res.next(err);
   }
-});
+})
 
 router.post("/usuario", async (req, res, next) => {
   try {
