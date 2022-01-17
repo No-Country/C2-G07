@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const { v4: uuidv4 } = require("uuid");
-const { ObraArte, Usuario, Categoria } = require("../db");
+const { ObraArte, Usuario, Category } = require("../db");
 const { Op } = require("sequelize");
 
 const router = Router();
@@ -9,33 +9,68 @@ router.get("/obraArte", async (req, res, next) => {
   let { name } = req.query; //este valor es el que viene del front   //localhost:3001/obraArte?name=va_el valor_a_buscar
   if (!name) {
     let obraArte = await ObraArte.findAll({
-      order:[['oa_name',req.query.order]],
-      include:{model: Usuario}
+      order: [["oa_name", req.query.order]],
+      include: [{ model: Usuario }, { model: Category }],
     });
     res.json(obraArte);
   } else {
     let obraArte = await ObraArte.findAll({
       where: { oa_name: { [Op.like]: `${name}%` } },
+      include: { model: Usuario },
     });
     res.json(obraArte);
   }
 });
 
+router.get("/obraArteLikes", async (req, res, next) => {
+  let obraArte= await ObraArte.findAll({
+    order:[["oa_likes",req.query.order]],
+    include: [{ model: Usuario }, { model: Category }],
+  });
+  res.json(obraArte);
+})
+
+router.get("/obraArte/:id", async (req, res, next) => {
+  try {
+    let obraArte = await ObraArte.findByPk(req.params.id, {
+      include: [{ model: Usuario }, { model: Category }],
+    });
+    res.json(obraArte);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get("/obraArteUsuario", async (req, res, next) => {
+  try {
+    let obrasUsuario = await ObraArte.findAll({
+      where: { usuario_id: req.query.usuarioId },
+      include: [{ model: Usuario }, { model: Category }],
+    });
+    res.json(obrasUsuario);
+  } catch (err) {
+    next(err);
+  }
+});
 
 router.post("/obraArte", async (req, res, next) => {
   try {
     const {
       oa_name,
+      oa_resenia,
       oa_descripcion,
       oa_fechaCreacion,
       oa_imagen_obra,
       usuario_id,
-      cat_id
+      cat_id,
     } = req.body;
+
+    console.log(usuario_id)
 
     let nuevaObra = await ObraArte.create({
       oa_id: uuidv4(),
       oa_name,
+      oa_resenia,
       oa_descripcion,
       oa_fechaCreacion,
       oa_oculto: false,
@@ -49,15 +84,10 @@ router.post("/obraArte", async (req, res, next) => {
   }
 });
 
-router.put('/obraArte/:oa_id', async (req, res, next) => {
+router.put("/obraArte/:oa_id", async (req, res, next) => {
   const { oa_id } = req.params;
-  const {
-    oa_name,
-    oa_descripcion,
-    oa_fechaCreacion,
-    oa_imagen_obra,
-    cat_id
-  } = req.body;
+  const { oa_name, oa_descripcion, oa_fechaCreacion, oa_imagen_obra, cat_id } =
+    req.body;
 
   try {
     const oaEdit = await ObraArte.findOne({ where: { oa_id: oa_id } });
@@ -68,28 +98,26 @@ router.put('/obraArte/:oa_id', async (req, res, next) => {
       oaEdit.oa_imagen_obra = oa_imagen_obra;
       oaEdit.cat_id = cat_id;
       await oaEdit.save();
-      res.json(oaEdit)
+      res.json(oaEdit);
     } else {
-      res.json({ message: `El ID Recibido: ${oa_id} no exite en la bd` })
+      res.json({ message: `El ID Recibido: ${oa_id} no exite en la bd` });
     }
-
-  } catch (err) { next(err) }
+  } catch (err) {
+    next(err);
+  }
 });
 
-router.delete('/:oa_id', async (req, res, next) => {
+router.delete("/:oa_id", async (req, res, next) => {
   const { oa_id } = req.params;
   const oaDelete = await ObraArte.findOne({ ioa_id: oa_id });
   if (oaDelete) {
-    oaDelete.destroy()
-      .then(() =>
-        res
-          .status(200)
-          .json({ message: `Obra de arte eliminada` })
-      )
-      .catch((err) => next(err))
+    oaDelete
+      .destroy()
+      .then(() => res.status(200).json({ message: `Obra de arte eliminada` }))
+      .catch((err) => next(err));
   } else {
-    res.status(404).json({ message: `La obra de arte no existe en la BD` })
+    res.status(404).json({ message: `La obra de arte no existe en la BD` });
   }
-})
+});
 
 module.exports = router;

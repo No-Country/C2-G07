@@ -12,6 +12,17 @@ router.get("/usuario", async (req, res, next) => {
   res.json(usuario);
 });
 
+router.get("/usuario/:id", async (req, res, next) => {
+  try{
+    let usuario = await Usuario.findByPk(req.params.id,{
+      include: {model: ObraArte}
+    });
+    res.json(usuario);
+  }catch(err){
+    res.next(err);
+  }
+});
+
 router.post("/usuario", async (req, res, next) => {
   try {
     const {
