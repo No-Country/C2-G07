@@ -39,7 +39,7 @@ export const AgregarObraArte = () => {
     oa_descripcion: "",
     oa_fechaCreacion: "",
     cat_id: 0,
-    usuario_id: "935a15ec-8ed6-4755-a30b-d01123f1d53d",
+    usuario_id: "763b7ea3-ec57-4811-b5e8-d1ead722b545",
   });
   const dispatch = useDispatch();
   let categorias = useSelector((state) => state.categorias);
@@ -92,60 +92,74 @@ export const AgregarObraArte = () => {
   };
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)} className={styles.container}>
-      <input
-        type="text"
-        name="oa_name"
-        placeholder="Nombre de la obra)"
-        value={input.oa_name}
-        onChange={handleInputChange}
-        required={true}
-      />
-      <input
-        type="text"
-        name="oa_resenia"
-        placeholder="Reseña (max 300 caracteres)"
-        value={input.oa_resenia}
-        onChange={handleInputChange}
-        required={true}
-      />
-      <input
-        type="text"
-        name="oa_descripcion"
-        placeholder="Descripcion..."
-        value={input.oa_descripcion}
-        onChange={handleInputChange}
-        required={true}
-      />
-      <input
-        type="date"
-        name="oa_fechaCreacion"
-        value={input.oa_fechaCreacion}
-        onChange={handleInputChange}
-        required={true}
-      />
-      <select onChange={handleInputChange} name="cat_id">
-        {categorias.map((cat) => (
-          <option value={cat.cat_id} selected="selected">
-            {cat.cat_descripcion}
-          </option>
-        ))}
-      </select>
-      <div>
+    <div className={styles.container}>
+      <h1>Publicar una nueva obra de arte</h1>
+      <form onSubmit={(e) => handleSubmit(e)} className={styles.containerForm}>
         <input
-          type="file"
-          name="file"
-          placeholder="Carga una imagen"
-          value={input.file}
-          onChange={uploadImage}
+          type="text"
+          name="oa_name"
+          placeholder="Nombre de la obra)"
+          value={input.oa_name}
+          onChange={handleInputChange}
+          required={true}
+          className={styles.input}
         />
+        <input
+          type="text"
+          name="oa_resenia"
+          placeholder="Reseña (max 300 caracteres)"
+          value={input.oa_resenia}
+          onChange={handleInputChange}
+          required={true}
+          className={styles.input}
+        />
+        <input
+          type="text"
+          name="oa_descripcion"
+          placeholder="Descripcion..."
+          value={input.oa_descripcion}
+          onChange={handleInputChange}
+          required={true}
+          className={styles.input}
+        />
+        <div className={styles.containerFecha}>
+          <p >Fecha creación: </p>
+          <input
+            type="date"
+            name="oa_fechaCreacion"
+            value={input.oa_fechaCreacion}
+            onChange={handleInputChange}
+            required={true}
+            className={styles.inputDate}
+          />
+        </div>
+        <select
+          onChange={handleInputChange}
+          name="cat_id"
+          className={styles.input}
+        >
+          {categorias.map((cat) => (
+            <option value={cat.cat_id} selected="selected">
+              {cat.cat_descripcion}
+            </option>
+          ))}
+        </select>
+        <div>
+          <input
+            type="file"
+            name="file"
+            placeholder="Carga una imagen"
+            value={input.file}
+            onChange={uploadImage}
+          />
 
-        <form action="" method="post">
-          <input type="text" value={url} hidden={true}/>
-        </form>
-        <div>{loading ? <Loader /> : <img src={image} alt="" />}</div>
-      </div>
-      <input type="submit" />
-    </form>
+          <form action="" method="post">
+            <input type="text" value={url} hidden={true} />
+          </form>
+          <div>{loading ? <Loader /> : <img src={image} alt="" height={250} />}</div>
+        </div>
+        <input type="submit" className={styles.buttonSubmit} />
+      </form>
+    </div>
   );
 };

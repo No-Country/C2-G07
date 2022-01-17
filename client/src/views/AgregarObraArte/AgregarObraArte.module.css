@@ -1,6 +1,41 @@
-.container {
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+}
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.input{
+    height: 25px;
+    width: 250px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border:2px solid #fe9f02;
+}
+
+.containerFecha{
+    display: flex;
+    align-items: center;
+}
+
+.inputDate{
+    height: 25px;
+    width: 150px;
+    border-radius: 8px;
+    border:2px solid #fe9f02;
+}
+.p{
+    margin-right: 10px;
+}
+
+.buttonSubmit{
+    height: 35px;
+    width: 80px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border:2px solid #fe9f02;
 }
