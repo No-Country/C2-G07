@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Cards } from '../../components/card/Card';
 import styles from './Home.module.css';
 import { SearchBar } from '../../components/SearchBar/SearchBar';
+import React from 'react';
 
 export default function Home() {
 	const obrasArtes = useSelector((state) => state.obraArtes);

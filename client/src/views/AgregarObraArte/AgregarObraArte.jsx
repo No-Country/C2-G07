@@ -3,6 +3,7 @@ import { getCategorias } from "../../redux/actions/index";
 import { useEffect, useState } from "react";
 import { Loader } from "../../components/Loader/Loader";
 import styles from "./AgregarObraArte.module.css";
+import React from "react";
 
 export const AgregarObraArte = () => {
   const [loading, setLoading] = useState(false);

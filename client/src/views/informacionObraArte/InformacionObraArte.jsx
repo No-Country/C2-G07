@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getInformacionObraArte } from "../../redux/actions";
 import styles from "./InformacionObraArte.module.css";
+import React from "react";
 
 export const InformacionObraArte = () => {
   const obra = useSelector((state) => state.obraArte);

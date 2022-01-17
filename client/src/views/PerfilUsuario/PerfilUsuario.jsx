@@ -6,6 +6,7 @@ import { getPerfilUsuario, getObrasArtesUsuario } from "../../redux/actions";
 import { ButtonPrimaryLink } from "../../components/ButtonPrimaryLink/ButoonPrimaryLink";
 import {Link} from "react-router-dom"
 import styles from "./PerfilUsuario.module.css";
+import React from "react";
 
 export const PerfilUsuario = () => {
   const usuario = useSelector((state) => state.usuario);
