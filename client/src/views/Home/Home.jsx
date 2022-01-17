@@ -16,6 +16,7 @@ export default function Home() {
 
 	return (
 		<div>
+			<h1 className={styles.title}>GALERIA</h1>
 			<SearchBar />
 			<ul className={styles.gridObrasArte}>
 				{obrasArtes.length > 0
@@ -24,12 +25,11 @@ export default function Home() {
 								key={index}
 								id={oa.oa_id}
 								name={oa.oa_name}
-								reseña={oa.oa_resenia}
-								fecha={oa.oa_fechaCreacion}
+								resenia={oa.oa_resenia}
 								likes={oa.oa_likes}
 								imagen={oa.oa_imagen_obra}
-								// nameAutor={oa.usuario.usuario_name}
-								// idUsuario={oa.usuario.usuario_id}
+								nameAutor={oa.usuario.usuario_name}
+								idUsuario={oa.usuario.usuario_id}
 							/>
 					  ))
 					: null}

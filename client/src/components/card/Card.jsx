@@ -9,11 +9,10 @@ import ShareIcon from "@mui/icons-material/Share";
 export const Cards = ({
   name,
   resenia,
-  fecha,
   imagen,
   likes,
-  // nameAutor,
-  // idUsuario,
+  nameAutor,
+  idUsuario,
    id
 }) => {
 
@@ -22,12 +21,11 @@ export const Cards = ({
       <div className={styles.containerImg}>
         <img src={imagen} alt="obra de arte" className={styles.imagen} />
       </div>
-
       <div className={styles.titleContainer}>
         <p className={styles.title}>{name}</p>
-        {/* <Link to={`/usuario/${idUsuario}`} className={styles.link}>
+        <Link to={`/usuario/${idUsuario}`} className={styles.link}>
           <p className={styles.p}>Por {nameAutor}</p>
-        </Link> */}
+        </Link>
       </div>
       <p>
         {resenia}{" "}

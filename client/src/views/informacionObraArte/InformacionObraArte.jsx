@@ -9,14 +9,14 @@ export const InformacionObraArte = () => {
   const obra = useSelector((state) => state.obraArte);
   const dispatch = useDispatch();
   const { id } = useParams();
-  let idUsuario = obra.usuario_id;
-//     let nombre = obra.usuario.usuario_name;
-//   console.log(nombre)
+
   useEffect(() => {
     dispatch(getInformacionObraArte(id));
   }, [dispatch, id]);
 
-  console.log(obra);
+ 
+  console.log( obra)
+
   var date = new Date(obra.oa_fechaCreacion);
   const formatDate = (date) => {
     let formatted_date =
@@ -27,7 +27,7 @@ export const InformacionObraArte = () => {
     <div>
       <div className={styles.containerHeader}>
         <h1>{obra.oa_name}</h1>
-        <Link to={`/usuario/${idUsuario}`}>
+        <Link to={`/usuario/${obra.usuario_id}`}>
           <h2 className={styles.nombreUsuario}>Ir al perfil del usuario</h2>
         </Link>
         <h3>Creado el dia {formatDate(date)}</h3>
@@ -38,7 +38,7 @@ export const InformacionObraArte = () => {
         </div>
         <div className={styles.containerImagen}>
           <p>Descripcion</p> <p>{obra.oa_descripcion}</p>
-          <p>Categoria: Categoria Prueba</p>
+          <p>Categoria: {obra.category.cat_descripcion}</p>
         </div>
       </div>
       <br />
