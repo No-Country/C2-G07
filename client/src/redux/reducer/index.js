@@ -6,6 +6,7 @@ import {
 	GET_INFORMACION_OBRA_ARTE,
 	GET_CATEGORIA,
 	GET_USUARIOS,
+	GET_OBRA_ARTES_LIKES
 } from '../actions/index';
 
 const initialState = {
@@ -62,6 +63,12 @@ export default function rootReducer(state = initialState, action = {}) {
 		return {
 			...state,
 			categorias: action.payload,
+		};
+	}
+	if (action.type === GET_OBRA_ARTES_LIKES) {
+		return {
+			...state,
+			obraArtes: action.payload,
 		};
 	}
 
