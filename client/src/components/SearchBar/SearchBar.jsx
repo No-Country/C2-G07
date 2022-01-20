@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getObrasArtesName, getObrasArtes } from "../../redux/actions/index";
 import { useDispatch } from "react-redux";
 import styles from "./SearchBar.module.css";
+import React from "react";
 
 export const SearchBar = () => {
   const [obra, setObra] = useState();

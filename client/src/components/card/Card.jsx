@@ -5,6 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CardActions from "@mui/material/CardActions";
 import ShareIcon from "@mui/icons-material/Share";
+import React from "react";
 
 export const Cards = ({
   name,
