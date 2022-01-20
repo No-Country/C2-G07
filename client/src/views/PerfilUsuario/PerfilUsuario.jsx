@@ -5,13 +5,17 @@ import { Cards } from "../../components/card/Card";
 import { getPerfilUsuario, getObrasArtesUsuario } from "../../redux/actions";
 import { ButtonPrimaryLink } from "../../components/ButtonPrimaryLink/ButoonPrimaryLink";
 import {Link} from "react-router-dom"
+import { ContactInfo } from "../../components/ContactInfo/ContactInfo";
 import styles from "./PerfilUsuario.module.css";
 
 export const PerfilUsuario = () => {
+  const [openContact, setOpenContact] = useState(false);
   const usuario = useSelector((state) => state.usuario);
   const obrasArtes = useSelector((state) => state.obrasUsuario);
   const distpatch = useDispatch();
   const { id } = useParams();
+
+  const handleContact = () => setOpenContact(!openContact);
 
   useEffect(() => {
     distpatch(getPerfilUsuario(id));
@@ -37,10 +41,12 @@ export const PerfilUsuario = () => {
             <Link to='/editPerfil' className={styles.button}>Editar Perfil</Link>
            </div>
             <h3>{obrasArtes.length} Publicaciones</h3>
-          <h4>Contacto</h4>
-          <p>Email: {usuario.usuario_email}</p>
-          <p>Redes Sociales: </p>
-          <p>Telefono: +5438889999999 </p>
+            <div onClick={handleContact}>
+              <ButtonPrimaryLink name="Contacto" />
+            </div>
+            {
+              openContact && <ContactInfo  userInfo={ usuario } handleContact= { handleContact }/> 
+            }
         </div>
       </span>
       <span >
