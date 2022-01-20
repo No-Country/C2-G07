@@ -8,6 +8,7 @@ export const GET_OBRAS_USUARIO = 'GET_OBRAS_USUARIO';
 export const GET_INFORMACION_OBRA_ARTE = 'GET_INFORMACION_OBRA_ARTE';
 export const GET_CATEGORIA = 'GET_CATEGORIA';
 export const GET_USUARIOS = 'GET_USUARIOS';
+export const GET_OBRA_ARTES_LIKES = 'GET_OBRA_ARTES_LIKES';
 
 export const getObrasArtes = (order) => {
 	return async function (dispatch) {
@@ -114,3 +115,17 @@ export const getCategorias = () => {
 		}
 	};
 };
+
+export function getObraArtesLikes(order) {
+	return async function (dispatch) {
+		try {
+			const response = await axios.get(`${REACT_APP_URL_API}/obraArteLikes?order=${order}`);
+			dispatch({
+				type: GET_OBRA_ARTES_LIKES,
+				payload: response.data,
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	};
+}

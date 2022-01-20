@@ -17,13 +17,15 @@
 
 .p{
     margin: 0;
+    width: 140px;
+    margin-right: 10px;
 }
 
 .containerSelect{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 400px;
+    width: 450px;
     
 }
 
