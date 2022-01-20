@@ -25,7 +25,7 @@ router.get("/obraArte", async (req, res, next) => {
 router.get("/obraArteLikes", async (req, res, next) => {
   let obraArte= await ObraArte.findAll({
     order:[["oa_likes",req.query.order]],
-    include: [{ model: Usuario }, { model: Category }],
+    include: { model: Usuario },
   });
   res.json(obraArte);
 })
