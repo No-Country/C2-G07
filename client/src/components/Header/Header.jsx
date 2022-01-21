@@ -1,5 +1,5 @@
 import { RiVipDiamondFill } from 'react-icons/ri';
-import { FaHamburger } from 'react-icons/fa';
+import { BiDownArrow } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
 import { MenuMobile } from '../MenuMobile/MenuMobile';
 import { LoginBtn } from '../Login-Logout/LoginBtn';
@@ -30,7 +30,7 @@ const Header = () => {
 				</h2>
 			</IconContext.Provider>
 			<div className={styles.burgerIcon} onClick={toggleMenu}>
-				<FaHamburger />
+				<BiDownArrow />
 			</div>
 			<nav>
 				<ul className={styles.menuDesktop}>
@@ -45,7 +45,7 @@ const Header = () => {
 						</Link>
 					</li>
 					<li>
-						<Link to ="/nuevaObraArte" className={styles.link}>
+						<Link to='/nuevaObraArte' className={styles.link}>
 							Nueva Obra de Arte
 						</Link>
 					</li>
