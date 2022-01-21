@@ -29,7 +29,7 @@ export const InformacionObraArte = () => {
       <div className={styles.containerHeader}>
         <h1>{obra.oa_name}</h1>
         <Link to={`/usuario/${obra.usuario_id}`}>
-          <h2 className={styles.nombreUsuario}>Ir al perfil del usuario</h2>
+          <h2 className={styles.nombreUsuario}>Ir al perfil del autor</h2>
         </Link>
         <h3>Creado el dia {formatDate(date)}</h3>
       </div>
@@ -39,8 +39,10 @@ export const InformacionObraArte = () => {
         </div>
         <div className={styles.containerImagen}>
           <p>Descripcion</p> <p>{obra.oa_descripcion}</p>
-          <p>Categoria: {obra.category.cat_descripcion}</p>
+          <p>Categoria: prueba </p>
+          <Link to='/galeria' className={styles.link}>Volver atras</Link>
         </div>
+       
       </div>
       <br />
       <br />

@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
     },
     usuario_imagen: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     usuario_password:{
       type:DataTypes.STRING,
