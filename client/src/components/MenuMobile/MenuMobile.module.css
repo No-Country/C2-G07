@@ -4,7 +4,9 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: 1000;
 	background-color: white;
+	color: black;
 	display: grid;
 	place-content: center;
 	animation: toggleMenu 0.3s ease-in-out;

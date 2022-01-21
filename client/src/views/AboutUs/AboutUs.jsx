@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AboutUs.module.css';
-
+import escritorioImg from '../../assets/img/escritorio-arte.jpg';
 const AboutUs = () => {
 	return (
 		<div>
@@ -16,7 +16,7 @@ const AboutUs = () => {
 				<div className={styles.imgContainer}>
 					<img
 						className={styles.mainImage}
-						src='https://images.unsplash.com/photo-1640622299541-8c8ab8a098f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80'
+						src={escritorioImg}
 						alt='art'
 					/>
 				</div>

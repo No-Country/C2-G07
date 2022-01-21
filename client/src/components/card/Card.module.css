@@ -14,6 +14,12 @@
 .p{
     margin: 0
 }
+
+.p:hover{
+    cursor: pointer;
+    color: var(--color-contraste1);
+}
+
 .link{
     color: white;
 }
@@ -34,7 +40,7 @@
 .container:hover{
     opacity: 0.7;
     border: 1.5px solid whitesmoke;
-    cursor: pointer;
+    
     transform: scale(1.20);
 }
 .containerImg{

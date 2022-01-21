@@ -31,7 +31,7 @@ export const Cards = ({
       <p>
         {resenia}{" "}
         <Link to={"/obraArte/"+id} className={styles.link}>
-          Ver mas...
+          <p className={styles.p}>Ver mas... </p>
         </Link>
       </p>
       <CardActions disableSpacing className={styles.containerIcons}>

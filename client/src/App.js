@@ -13,6 +13,7 @@ import { AgregarObraArte } from "./views/AgregarObraArte/AgregarObraArte";
 import { EditarPerfil } from "./views/EditarPerfil/EditarPerfil";
 
 function App() {
+
   return (
     <div className="App">
       <Header />
@@ -29,6 +30,7 @@ function App() {
       <Footer />
     </div>
   );
+
 }
 
 export default App;
