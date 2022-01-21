@@ -35,12 +35,12 @@ export const EditarPerfil = () => {
     try {
       updateUser({ input }, id);
       setInput({
-        name: "",
+        name:"",
         telefono: "",
-        facebook: "",
-        instagram: "",
+        facebook:"",
+        instagram:"",
         paginaweb: "",
-      });
+      })
     } catch (err) {
       console.log(err.message);
     }

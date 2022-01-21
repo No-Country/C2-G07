@@ -14,5 +14,4 @@ export default function updateUser({ input }, id) {
     body: JSON.stringify(body),
   });
   alert("Datos de usuarios Modificados!");
-
 }
