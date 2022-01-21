@@ -49,7 +49,11 @@ const Header = () => {
 							Nueva Obra de Arte
 						</Link>
 					</li>
-					<li>Eventos</li>
+					<li>
+						<Link to="/aboutUs" className={styles.link}>
+							Nosotros
+						</Link>
+					</li>
 				</ul>
 				{isAuthenticated ? <ProfilePicture /> : <LoginBtn />}
 			</nav>
