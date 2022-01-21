@@ -16,7 +16,11 @@ async function createData(){
 
    const usuario = [
        {usuario_id: uuidv4(), usuario_name: "Goku Sayajin", usuario_email: "gokudbz@mail.com", usuario_token: "lk12kl321", usuario_imagen:"https://i2.wp.com/codigoespagueti.com/wp-content/uploads/2021/02/Dragon-Ball-Todas-las-transformaciones-oficiales-de-Goku-10.png?resize=640%2C720&quality=80&ssl=1", usuario_password:"1234", rol_id:2},
-       {usuario_id: uuidv4(), usuario_name: "Martin Perez", usuario_email: "martin@mail.com", usuario_token: "lk12kdsadasl321", usuario_imagen:"https://media.lv12.com.ar/p/d7cf762097ce556a45e6871bbbec9c30/adjuntos/261/imagenes/001/522/0001522189/1200x900/smart/leonardo-ponzio-emblema-river-platejpeg.jpeg", usuario_password:"1234", rol_id:2}
+       {usuario_id: uuidv4(), usuario_name: "Martin Perez", usuario_email: "martin@mail.com", usuario_token: "lk12kdsadasl321", usuario_imagen:"https://media.lv12.com.ar/p/d7cf762097ce556a45e6871bbbec9c30/adjuntos/261/imagenes/001/522/0001522189/1200x900/smart/leonardo-ponzio-emblema-river-platejpeg.jpeg", usuario_password:"1234", rol_id:2},
+       {
+           usuario_id: uuidv4(), usuario_name:"Facundo Maksud", usuario_email:"facundomaksud@gmail.com", usuario_token:"kldaslkdaslkdklas", usuario_imagen:"https://lh3.googleusercontent.com/a-/AOh14GhddTDQObPXZC0HQ-r7OSEtjuEr7Eo_bmXPOgG1yA=s96-c", usuario_password:"1234", rol_id:2
+       }
+
    ]
 
    const obraArte = [

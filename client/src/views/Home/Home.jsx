@@ -5,6 +5,8 @@ import { Cards } from "../../components/card/Card";
 import styles from "./Home.module.css";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 import React from "react";
+import ReactPaginate from "react-paginate";
+
 
 export default function Home() {
   const obrasArtes = useSelector((state) => state.obraArtes);
@@ -15,47 +17,34 @@ export default function Home() {
   useEffect(() => {
     distpatch(getObrasArtes(order));
   }, [distpatch, order]);
-  const next_Page = () => {
-    if (obrasArtes.length <= page + 12) {
-      setPage(page);
-    } else {
-      setPage(page + 12);
-    }
-  };
-  const prev_Page = () => {
-    if (page < 11) {
-      setPage(0);
-    } else {
-      setPage(page - 12);
-    }
-  };
-  const first_Page = () => {
-    setPage(0);
+ 
+  const postsPorPagina = 9;
+  const pagesVisited = page * postsPorPagina;
+  const pageCount = Math.ceil(obrasArtes?.length / postsPorPagina);
+  const changePage = ({ selected }) => {
+    setPage(selected);
   };
 
-  useEffect(() => {
-    first_Page();
-  }, [obrasArtes]);
-
+ 
   return (
     <div>
       <h1 className={styles.title}>GALERIA</h1>
       <SearchBar />
-      <div className={styles.containerPagination}>
-        <button className={styles.btnPaginado} onClick={prev_Page}>
-          Atras
-        </button>
-        <p className={styles.numeroPagina}>
-          Pagina {page <= 0 ? 0 : page - 12 + 1}
-        </p>
-        <button className={styles.btnPaginado} onClick={next_Page}>
-          Siguiente
-        </button>
-      </div>
+      <ReactPaginate
+            previousLabel={"<"}
+            nextLabel={">"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={styles.paginationBttns}
+            previousLinkClassName={styles.previousBttn}
+            nextLinkClassName={styles.nextBttn}
+            disabledClassName={styles.paginationDisabled}
+            activeClassName={styles.paginationActive}
+          />
       <ul className={styles.gridObrasArte}>
         {obrasArtes.length > 0
           ? obrasArtes
-              ?.slice(page, page + 12)
+              ?.slice(pagesVisited, pagesVisited + postsPorPagina)
               .map((oa, index) => (
                 <Cards
                   key={index}

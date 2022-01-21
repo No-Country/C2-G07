@@ -9,6 +9,8 @@ const ProfilePicture = () => {
 	const { user } = useAuth0();
 	const { picture } = user;
 
+	console.log(picture)
+
 	const handleOpenProfile = () => setOpenProfile(!openProfile);
 
 	return (

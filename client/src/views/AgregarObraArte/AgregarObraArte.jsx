@@ -40,7 +40,7 @@ export const AgregarObraArte = () => {
     oa_descripcion: "",
     oa_fechaCreacion: "",
     cat_id: 0,
-    usuario_id: "763b7ea3-ec57-4811-b5e8-d1ead722b545",
+    usuario_id: "938596f8-5580-422c-a527-dbb2c930e0e1",
   });
   const dispatch = useDispatch();
   let categorias = useSelector((state) => state.categorias);
@@ -87,6 +87,12 @@ export const AgregarObraArte = () => {
         body: JSON.stringify(body),
       });
       alert("Obra de arte creada!");
+      setInput({
+        oa_name: "",
+        oa_resenia: "",
+        oa_descripcion: "",
+        oa_fechaCreacion: "",
+      });
     } catch (err) {
       console.log(err.message);
     }

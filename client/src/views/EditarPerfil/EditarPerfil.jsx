@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getPerfilUsuario } from "../../redux/actions";
+import {React} from "react"
 import styles from './EditarPerfil.module.css'
 
 export const EditarPerfil = () => {
