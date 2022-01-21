@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getPerfilUsuario } from "../../redux/actions";
-import {React} from "react"
-import styles from './EditarPerfil.module.css'
+import React from "react";
+import styles from "./EditarPerfil.module.css";
+import updateUser from "../../utils/index";
 
 export const EditarPerfil = () => {
   const usuario = useSelector((state) => state.usuario);
@@ -30,20 +31,20 @@ export const EditarPerfil = () => {
   };
 
   const handleSubmit = (e) => {
-      e.preventDefault();
-      try{
-        let {name, imagen, telefono, facebook, instagram, paginaweb} = input;
-        let body = {
-            name, imagen, telefono, facebook, instagram, paginaweb
-        }
-        fetch("http://localhost:3001/usuario/"+id, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body),
-          });
-          alert("Datos de usuarios Modificados!");
-      }catch(err){console.log(err.message);}
-  }
+    e.preventDefault();
+    try {
+      updateUser({ input }, id);
+      setInput({
+        name: "",
+        telefono: "",
+        facebook: "",
+        instagram: "",
+        paginaweb: "",
+      });
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -105,9 +106,14 @@ export const EditarPerfil = () => {
             className={styles.input}
           />
         </div>
-        <input type="submit" value="Guardar" className={styles.buttonSubmit}/>
+        <input type="submit" value="Guardar" className={styles.buttonSubmit} />
       </form>
-      <br /><br /><br /><br /><br /><br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
