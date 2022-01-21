@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Cards } from "../../components/card/Card";
 import { getPerfilUsuario, getObrasArtesUsuario } from "../../redux/actions";
-import { ButtonPrimaryLink } from "../../components/ButtonPrimaryLink/ButoonPrimaryLink";
 import {Link} from "react-router-dom"
 import styles from "./PerfilUsuario.module.css";
 import React from "react";
@@ -35,7 +34,7 @@ export const PerfilUsuario = () => {
         <div className={styles.contacto}>
            <div className={styles.editPerfil}>
            <h1>{usuario.usuario_name}</h1>
-            <Link to='/editPerfil' className={styles.button}>Editar Perfil</Link>
+            <Link to={'/editarPerfil/'+id} className={styles.button}>Editar Perfil</Link>
            </div>
             <h3>{obrasArtes.length} Publicaciones</h3>
           <h4>Contacto</h4>

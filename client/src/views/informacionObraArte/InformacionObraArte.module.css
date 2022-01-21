@@ -27,3 +27,14 @@
 .nombreUsuario:hover{
     color: black;
 }
+
+.link{
+    color:white;
+    font-size: 1.3rem
+
+}
+
+.link:hover{
+    font-size: 1.5rem;
+    color: #fe9f02;
+}
