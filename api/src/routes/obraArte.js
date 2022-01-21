@@ -22,6 +22,14 @@ router.get("/obraArte", async (req, res, next) => {
   }
 });
 
+router.get("/obraArteLikes", async (req, res, next) => {
+  let obraArte= await ObraArte.findAll({
+    order:[["oa_likes",req.query.order]],
+    include: { model: Usuario },
+  });
+  res.json(obraArte);
+})
+
 router.get("/obraArte/:id", async (req, res, next) => {
   try {
     let obraArte = await ObraArte.findByPk(req.params.id, {

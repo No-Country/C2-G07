@@ -27,7 +27,23 @@ module.exports = (sequelize) => {
     },
     usuario_password:{
       type:DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+    },
+    usuario_telefono: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    usuario_facebook: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    usuario_instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    usuario_paginaweb: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   });
 };

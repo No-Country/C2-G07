@@ -7,6 +7,7 @@ import { ButtonPrimaryLink } from "../../components/ButtonPrimaryLink/ButoonPrim
 import {Link} from "react-router-dom"
 import { ContactInfo } from "../../components/ContactInfo/ContactInfo";
 import styles from "./PerfilUsuario.module.css";
+import React from "react";
 
 export const PerfilUsuario = () => {
   const [openContact, setOpenContact] = useState(false);
