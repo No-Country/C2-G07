@@ -1,3 +1,18 @@
+/* .gridObrasArte {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 60px;
+  justify-content: center;
+  margin-top: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+} */
+
 .gridObrasArte {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
@@ -12,3 +27,26 @@
   display: flex;
   justify-content: center;
 }
+
+.containerPagination{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.btnPaginado{
+  width: 120px;
+
+}
+
+.btnPaginado:hover{
+  cursor: pointer;
+}
+
+.numeroPagina{
+  margin: 0 40px 0 40px
+}
+
+
