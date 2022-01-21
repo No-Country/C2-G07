@@ -43,28 +43,30 @@ export const SearchBar = () => {
 
       <div className={styles.containerSelect}>
         <p className={styles.p}>Ordenar por</p>
+        
         <div>
-          <span>Valoracion</span>
+          
         <select
           value={order}
           className={styles.select}
           onChange={handleChangeLikes}
         >
-          <option value={"ASC"}>ASC</option>
-          <option value={"DESC"}>DESC</option>
+          <option value={"ASC"}>Menor Valoracion</option>
+          <option value={"DESC"}>Mayor Valoracion</option>
         </select>
         </div>
         <div>
-          <span>Nombre</span>
+         
         <select
           value={order}
           onChange={handleChangeNombreObra}
           className={styles.select}
         >
-          <option value={"ASC"}>ASC</option>
-          <option value={"DESC"}>DESC</option>
+          <option value={"ASC"}>A-Z</option>
+          <option value={"DESC"}>Z-A</option>
         </select>
         </div>
+        
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import { SearchBar } from "../../components/SearchBar/SearchBar";
 import React from "react";
 import ReactPaginate from "react-paginate";
 
-
 export default function Home() {
   const obrasArtes = useSelector((state) => state.obraArtes);
   // console.log(obrasArtes.usuario_name)
@@ -17,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     distpatch(getObrasArtes(order));
   }, [distpatch, order]);
- 
+
   const postsPorPagina = 9;
   const pagesVisited = page * postsPorPagina;
   const pageCount = Math.ceil(obrasArtes?.length / postsPorPagina);
@@ -25,22 +24,21 @@ export default function Home() {
     setPage(selected);
   };
 
- 
   return (
     <div>
       <h1 className={styles.title}>GALERIA</h1>
       <SearchBar />
       <ReactPaginate
-            previousLabel={"<"}
-            nextLabel={">"}
-            pageCount={pageCount}
-            onPageChange={changePage}
-            containerClassName={styles.paginationBttns}
-            previousLinkClassName={styles.previousBttn}
-            nextLinkClassName={styles.nextBttn}
-            disabledClassName={styles.paginationDisabled}
-            activeClassName={styles.paginationActive}
-          />
+        previousLabel={"<"}
+        nextLabel={">"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={styles.paginationBttns}
+        previousLinkClassName={styles.previousBttn}
+        nextLinkClassName={styles.nextBttn}
+        disabledClassName={styles.paginationDisabled}
+        activeClassName={styles.paginationActive}
+      />
       <ul className={styles.gridObrasArte}>
         {obrasArtes.length > 0
           ? obrasArtes
@@ -62,4 +60,3 @@ export default function Home() {
     </div>
   );
 }
-
