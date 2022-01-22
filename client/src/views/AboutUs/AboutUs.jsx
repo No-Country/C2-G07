@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './AboutUs.module.css';
 import escritorioImg from '../../assets/img/escritorio-arte.jpg';
+import { Loader } from '../../components/Loader/Loader';
+
 const AboutUs = () => {
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 900);
+	}, []);
+
+	if (loading) return <Loader />;
+
 	return (
 		<div>
 			<main className={`${styles.mainGrid} ${styles.main}`}>
@@ -14,11 +26,7 @@ const AboutUs = () => {
 					</p>
 				</div>
 				<div className={styles.imgContainer}>
-					<img
-						className={styles.mainImage}
-						src={escritorioImg}
-						alt='art'
-					/>
+					<img className={styles.mainImage} src={escritorioImg} alt='art' />
 				</div>
 				<div className={styles.mainText}>
 					<h2 className={styles.sectionTitle}>Somos realmente creativos</h2>

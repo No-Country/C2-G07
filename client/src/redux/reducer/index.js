@@ -6,7 +6,7 @@ import {
 	GET_INFORMACION_OBRA_ARTE,
 	GET_CATEGORIA,
 	GET_USUARIOS,
-	GET_OBRA_ARTES_LIKES
+	GET_OBRA_ARTES_LIKES,
 } from '../actions/index';
 
 const initialState = {
