@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getPerfilUsuario } from "../../redux/actions";
 import React from "react";
 import styles from "./EditarPerfil.module.css";
-import updateUser from "../../utils/index";
+import updateUser from "../../utils/usuarioUtil";
 
 export const EditarPerfil = () => {
   const usuario = useSelector((state) => state.usuario);
