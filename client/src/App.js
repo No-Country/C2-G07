@@ -24,7 +24,9 @@ function App() {
 				<Route path='/obraArte/:id' element={<InformacionObraArte/>}/>
 				<Route path='/aboutUs' element={<AboutUs />} />
 				<Route path='/nuevaObraArte' element={<AgregarObraArte/>}/>
+				<Route path='/editarPerfil/:id' element={<EditarPerfil/>}/>
 			</Routes>
+			<Footer />
 	    </div>
   	);
 

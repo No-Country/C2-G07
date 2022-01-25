@@ -5,7 +5,7 @@ import { Avatar } from '@mui/material';
 const ContactInfo = ( { userInfo , handleContact} ) =>{
 
     const {usuario_name, usuario_email, usuario_imagen, redes_sociales, telefono } = userInfo; 
-    // TODO poner en el medio de la pantalla con css
+    
     return(
         <div className={styles.modal}>
             <div className={styles.container}>
