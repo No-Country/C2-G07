@@ -3,6 +3,7 @@ import { getCategorias } from "../../redux/actions/index";
 import { useEffect, useState } from "react";
 import { Loader } from "../../components/Loader/Loader";
 import styles from "./AgregarObraArte.module.css";
+import crearObraArte from '../../utils/obraArteUtil'
 import React from "react";
 
 export const AgregarObraArte = () => {
@@ -40,7 +41,7 @@ export const AgregarObraArte = () => {
     oa_descripcion: "",
     oa_fechaCreacion: "",
     cat_id: 0,
-    usuario_id: "763b7ea3-ec57-4811-b5e8-d1ead722b545",
+    usuario_id: "e3c93f4a-b456-4e90-9baa-87a0a4ae9666",
   });
   const dispatch = useDispatch();
   let categorias = useSelector((state) => state.categorias);
@@ -60,33 +61,13 @@ export const AgregarObraArte = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      let {
-        oa_name,
-        oa_resenia,
-        oa_descripcion,
-        oa_fechaCreacion,
-        cat_id,
-        usuario_id,
-      } = input;
-
-      let body = {
-        oa_name,
-        oa_resenia,
-        oa_descripcion,
-        oa_fechaCreacion,
-        oa_imagen_obra: url,
-        usuario_id,
-        cat_id,
-      };
-
-      console.log(body);
-
-      fetch("http://localhost:3001/obraArte", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+      crearObraArte({input}, url)
+      setInput({
+        oa_name: "",
+        oa_resenia: "",
+        oa_descripcion: "",
+        oa_fechaCreacion: "",
       });
-      alert("Obra de arte creada!");
     } catch (err) {
       console.log(err.message);
     }

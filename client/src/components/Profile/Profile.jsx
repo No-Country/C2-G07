@@ -29,6 +29,7 @@ const Profile = () => {
 			</div>
 			<hr className={styles.divider} />
 			<button>Tu perfil</button>
+			{/* <Link to={'/usuario/'+id}>Tu perfil</Link> */}
 			<hr />
 			<LogoutBtn />
 		</div>

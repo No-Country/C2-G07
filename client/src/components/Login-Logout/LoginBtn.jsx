@@ -3,7 +3,8 @@ import styles from './LoginLogout.module.css';
 import React from 'react';
 
 const LoginBtn = () => {
-	const { loginWithRedirect } = useAuth0();
+	const { loginWithRedirect} = useAuth0();
+	
 
 	const handleLogin = () => loginWithRedirect();
 
