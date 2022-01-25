@@ -70,6 +70,19 @@ export default function Home() {
 						))}
 				</ul>
 			)}
+			<div className={styles.containerPaginate}>
+				<ReactPaginate
+					previousLabel={'<'}
+					nextLabel={'>'}
+					pageCount={pageCount}
+					onPageChange={changePage}
+					containerClassName={styles.paginationBttns}
+					previousLinkClassName={styles.previousBttn}
+					nextLinkClassName={styles.nextBttn}
+					disabledClassName={styles.paginationDisabled}
+					activeClassName={styles.paginationActive}
+				/>
+			</div>
 		</div>
 	);
 }
