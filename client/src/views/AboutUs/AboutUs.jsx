@@ -1,19 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './AboutUs.module.css';
 import escritorioImg from '../../assets/img/escritorio-arte.jpg';
-import { Loader } from '../../components/Loader/Loader';
 
 const AboutUs = () => {
-	const [loading, setLoading] = useState(true);
-
-	useEffect(() => {
-		setTimeout(() => {
-			setLoading(false);
-		}, 900);
-	}, []);
-
-	if (loading) return <Loader />;
-
 	return (
 		<div>
 			<main className={`${styles.mainGrid} ${styles.main}`}>
