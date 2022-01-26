@@ -12,6 +12,7 @@ import { InformacionObraArte } from "./views/informacionObraArte/InformacionObra
 import { AgregarObraArte } from "./views/AgregarObraArte/AgregarObraArte";
 import { EditarPerfil } from "./views/EditarPerfil/EditarPerfil";
 
+
 function App() {
 	return (
 		<div className='App'>

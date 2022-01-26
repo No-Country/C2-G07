@@ -15,7 +15,6 @@ const Profile = () => {
 		middle_name,
 	} = user;
 	console.log(name, nickname, given_name, family_name, middle_name);
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.profileInfo}>
