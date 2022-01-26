@@ -29,9 +29,8 @@
   }
 
   .linkContent{
-    font-size: 50px;
+    font-size: 50px !important;
     background-color: rgba(128, 128, 128, 0.335);
-    color:var(--color-contraste1);
     border-radius: 50%;
     opacity: 100%;
     box-shadow: 10px 10px 2px #000;
@@ -40,6 +39,7 @@
 
   .linkContent:hover{
     filter:none;
+    color:var(--color-contraste1);
   }
 
   .containerInfo{
