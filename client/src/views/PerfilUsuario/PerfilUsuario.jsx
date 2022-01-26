@@ -6,11 +6,9 @@ import { getPerfilUsuario, getObrasArtesUsuario } from '../../redux/actions';
 import { ContactInfo } from '../../components/ContactInfo/ContactInfo';
 import styles from './PerfilUsuario.module.css';
 import { ButtonPrimaryLink } from '../../components/ButtonPrimaryLink/ButoonPrimaryLink';
-import { Loader } from '../../components/Loader/Loader';
 
 export const PerfilUsuario = () => {
 	const [openContact, setOpenContact] = useState(false);
-	const [loading, setLoading] = useState(true);
 	const usuario = useSelector((state) => state.usuario);
 	const obrasArtes = useSelector((state) => state.obrasUsuario);
 	const dispatch = useDispatch();
@@ -21,12 +19,7 @@ export const PerfilUsuario = () => {
 	useEffect(() => {
 		dispatch(getPerfilUsuario(id));
 		dispatch(getObrasArtesUsuario(id));
-		setTimeout(() => {
-			setLoading(false);
-		}, 1200);
 	}, [dispatch, id]);
-
-	if (loading) return <Loader />;
 
 	return (
 		<div className={styles.container}>

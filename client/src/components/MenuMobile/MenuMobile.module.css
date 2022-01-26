@@ -11,6 +11,7 @@
 	place-content: center;
 	animation: toggleMenu 0.3s ease-in-out;
 }
+
 .menuMobile ul {
 	display: flex;
 	flex-direction: column;
@@ -19,6 +20,14 @@
 
 ul li {
 	list-style: none;
+}
+
+.link {
+	color: black;
+}
+
+.link:active {
+	text-decoration: line-through;
 }
 
 .closeIcon {
