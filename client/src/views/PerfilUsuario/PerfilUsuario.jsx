@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { Cards } from '../../components/card/Card';
+import { Avatar } from '@mui/material';
 import { getPerfilUsuario, getObrasArtesUsuario } from '../../redux/actions';
 import { ContactInfo } from '../../components/ContactInfo/ContactInfo';
 import styles from './PerfilUsuario.module.css';
@@ -50,6 +51,12 @@ export const PerfilUsuario = () => {
 			<span>
 				<h2 className={styles.title}>OBRAS REALIZADAS</h2>
 				<ul className={styles.gridObrasArte}>
+					<li className={styles.agregarImagen}>
+						
+							<Link to='/nuevaObraArte'>
+								<Avatar sx={{ width: 100, height: 100 }} className={styles.linkContent}>+</Avatar>
+							</Link>
+					</li>
 					{obrasArtes.length > 0
 						? obrasArtes.map((oa, index) => (
 								<Cards
