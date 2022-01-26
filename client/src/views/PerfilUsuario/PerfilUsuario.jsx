@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { Cards } from '../../components/card/Card';
 import { Avatar } from '@mui/material';
+import { useAuth0 } from '@auth0/auth0-react';
 import { getPerfilUsuario, getObrasArtesUsuario } from '../../redux/actions';
 import { ContactInfo } from '../../components/ContactInfo/ContactInfo';
 import styles from './PerfilUsuario.module.css';
@@ -14,6 +15,7 @@ export const PerfilUsuario = () => {
 	const obrasArtes = useSelector((state) => state.obrasUsuario);
 	const dispatch = useDispatch();
 	const { id } = useParams();
+	const { isLoading, isAuthenticated } = useAuth0();
 
 	const handleContact = () => setOpenContact(!openContact);
 
@@ -33,12 +35,12 @@ export const PerfilUsuario = () => {
 					/>
 				</div>
 				<div className={styles.contacto}>
-					<div className={styles.editPerfil}>
+					{isAuthenticated? <div className={styles.editPerfil}>
 						<h1>{usuario.usuario_name}</h1>
 						<Link to={'/editarPerfil/' + id} className={styles.button}>
 							Editar Perfil
 						</Link>
-					</div>
+					</div> : null}
 					<h3>{obrasArtes.length} Publicaciones</h3>
 					<div onClick={handleContact}>
 						<ButtonPrimaryLink name='Contacto' />
@@ -51,12 +53,12 @@ export const PerfilUsuario = () => {
 			<span>
 				<h2 className={styles.title}>OBRAS REALIZADAS</h2>
 				<ul className={styles.gridObrasArte}>
-					<li className={styles.agregarImagen}>
+					{isAuthenticated ? <li className={styles.agregarImagen}>
 						
-							<Link to='/nuevaObraArte'>
-								<Avatar sx={{ width: 100, height: 100 }} className={styles.linkContent}>+</Avatar>
-							</Link>
-					</li>
+						<Link to='/nuevaObraArte'>
+							<Avatar sx={{ width: 100, height: 100 }} className={styles.linkContent}>+</Avatar>
+						</Link>
+				</li>: null}
 					{obrasArtes.length > 0
 						? obrasArtes.map((oa, index) => (
 								<Cards
