@@ -1,8 +1,15 @@
 .container{
     display:flex;
     flex-wrap: wrap;
+    position:sticky;
+    text-align: center;
+
+
 }
 
 .box{
     margin: 0;
+ 
+    
 }
+

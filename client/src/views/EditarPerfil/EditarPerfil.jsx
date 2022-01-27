@@ -63,10 +63,10 @@ export const EditarPerfil = () => {
 					/>
 				</div>
 				<div className={styles.containerInput}>
-					<label className={styles.label}>Telefono: </label>
+					<label className={styles.label}>Teléfono: </label>
 					<input
 						type='text'
-						name='telefono'
+						name='teléfono'
 						placeholder='Telefono...'
 						value={input.telefono}
 						onChange={handleInputChange}
@@ -78,7 +78,7 @@ export const EditarPerfil = () => {
 					<input
 						type='text'
 						name='facebook'
-						placeholder='facebook...'
+						placeholder='Facebook...'
 						value={input.facebook}
 						onChange={handleInputChange}
 						className={styles.input}
@@ -96,11 +96,11 @@ export const EditarPerfil = () => {
 					/>
 				</div>
 				<div className={styles.containerInput}>
-					<label className={styles.label}>PeginaWeb: </label>
+					<label className={styles.label}>PáginaWeb: </label>
 					<input
 						type='text'
 						name='paginaweb'
-						placeholder='Telefono...'
+						placeholder='http://...'
 						value={input.paginaweb}
 						onChange={handleInputChange}
 						className={styles.input}

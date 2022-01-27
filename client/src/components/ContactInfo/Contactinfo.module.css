@@ -18,7 +18,7 @@
     place-items: center;
     padding: 2rem;
     background-color: var(--background-color);
-    border: var(--color-contraste1) double 1px;
+    border: orangered double 1px;
     position:relative;
     animation: popUpModal .3s step-end;
 }
