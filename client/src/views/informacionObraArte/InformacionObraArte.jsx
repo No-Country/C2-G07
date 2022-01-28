@@ -8,17 +8,15 @@ import { Avatar } from '@mui/material';
 
 export const InformacionObraArte = () => {
 	const obra = useSelector((state) => state.obraArte);
-	const idUsuario = obra.usuario_id;
 	const usuario = useSelector((state) => state.usuario);
 	const dispatch = useDispatch();
 	const { id } = useParams();
 
 	useEffect(() => {
 		dispatch(getInformacionObraArte(id));
-		dispatch(getPerfilUsuario(idUsuario));
-	}, [dispatch, id, idUsuario]);
+		dispatch(getPerfilUsuario(usuario.usuario_id));
+	}, [dispatch, id, usuario]);
 
-	console.log(idUsuario);
 	console.log(usuario);
 	console.log(obra);
 
