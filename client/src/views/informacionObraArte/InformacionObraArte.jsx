@@ -47,7 +47,7 @@ export const InformacionObraArte = () => {
 				<div className={styles.containerInfo}>
 					<p className={styles.titles}>Descripción:</p>
 					<p className={styles.description}>{obra.oa_descripcion}</p>
-					<p>Categoria: prueba </p>
+					<p className={styles.titles}>Categoria: {obra.category.cat_descripcion}</p>
 				</div>
 			</div>
 		</div>

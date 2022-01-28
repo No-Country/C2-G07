@@ -107,6 +107,23 @@ router.put("/obraArte/:oa_id",  async (req, res, next) => {
     next(err);
   }
 });
+router.put("/obraArteLike/:id",  async (req, res, next) => {
+  const { id } = req.params;
+  const {likes} =req.body;
+
+  try {
+    const oaEdit = await ObraArte.findOne({ where: { oa_id: id} });
+    if (oaEdit) {
+      oaEdit.oa_likes = likes;
+      await oaEdit.save();
+      res.json(oaEdit);
+    } else {
+      res.json({ message: `El ID Recibido: ${id} no exite en la bd` });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 
 router.delete("/:oa_id", async (req, res, next) => {
   const { oa_id } = req.params;
