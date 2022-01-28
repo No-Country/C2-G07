@@ -31,40 +31,40 @@ export const SearchBar = () => {
 
   return (
     <div className={styles.container}>
-      <div>
-        <input
-          type="text"
-          placeholder="Busqueda por nombre..."
-          value={obra}
-          onChange={(e) => setObra(e.target.value)}
-          className={styles.input}
-        />
-      </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Busqueda por nombre..."
+            value={obra}
+            onChange={(e) => setObra(e.target.value)}
+            className={styles.input}
+          />
+        </div>
 
       <div className={styles.containerSelect}>
         <p className={styles.p}>Ordenar por</p>
         
         <div>
           
-        <select
-          value={order}
-          className={styles.select}
-          onChange={handleChangeLikes}
-        >
-          <option value={"ASC"}>Menor Valoracion</option>
-          <option value={"DESC"}>Mayor Valoracion</option>
-        </select>
+          <select
+            value={order}
+            className={styles.select}
+            onChange={handleChangeLikes}
+          >
+            <option value={"ASC"}>Menor Valoracion</option>
+            <option value={"DESC"}>Mayor Valoracion</option>
+          </select>
         </div>
         <div>
          
-        <select
-          value={order}
-          onChange={handleChangeNombreObra}
-          className={styles.select}
-        >
-          <option value={"ASC"}>A-Z</option>
-          <option value={"DESC"}>Z-A</option>
-        </select>
+          <select
+            value={order}
+            onChange={handleChangeNombreObra}
+            className={styles.select}
+          >
+            <option value={"ASC"}>A-Z</option>
+            <option value={"DESC"}>Z-A</option>
+          </select>
         </div>
         
       </div>
