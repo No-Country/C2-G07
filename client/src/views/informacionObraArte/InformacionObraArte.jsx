@@ -2,23 +2,21 @@ import { useParams } from 'react-router';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {getPerfilUsuario, getInformacionObraArte } from '../../redux/actions';
+import { getPerfilUsuario, getInformacionObraArte } from '../../redux/actions';
 import styles from './InformacionObraArte.module.css';
 import { Avatar } from '@mui/material';
 
 export const InformacionObraArte = () => {
 	const obra = useSelector((state) => state.obraArte);
-	const idUsuario = obra.usuario_id;
 	const usuario = useSelector((state) => state.usuario);
 	const dispatch = useDispatch();
 	const { id } = useParams();
 
 	useEffect(() => {
 		dispatch(getInformacionObraArte(id));
-		dispatch(getPerfilUsuario(idUsuario));
-	}, [dispatch, id, idUsuario]);
+		dispatch(getPerfilUsuario(usuario.usuario_id));
+	}, [dispatch, id, usuario]);
 
-	console.log(idUsuario);
 	console.log(usuario);
 	console.log(obra);
 
@@ -37,10 +35,11 @@ export const InformacionObraArte = () => {
 				<div className={styles.container}>
 					<div className={styles.containerHeader}>
 						<Link to={`/usuario/${obra.usuario_id}`} className={styles.link}>
-							<Avatar 
-							alt={'Foto de perfil de '+ usuario.usuario_name}
-							src={usuario.usuario_imagen}
-							sx={{ width: 50, height: 50 }}></Avatar>
+							<Avatar
+								alt={'Foto de perfil de ' + usuario.usuario_name}
+								src={usuario.usuario_imagen}
+								sx={{ width: 50, height: 50 }}
+							></Avatar>
 						</Link>
 						<h2>{obra.oa_name}</h2>
 						<h4>{formatDate(date)}</h4>
