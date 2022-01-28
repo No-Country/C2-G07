@@ -8,17 +8,16 @@ import { Avatar } from '@mui/material';
 
 export const InformacionObraArte = () => {
 	const obra = useSelector((state) => state.obraArte);
-	const usuario = useSelector((state) => state.usuario);
+	const { usuario_id, usuario_name, usuario_imagen } = useSelector(
+		(state) => state.usuario
+	);
 	const dispatch = useDispatch();
 	const { id } = useParams();
 
 	useEffect(() => {
 		dispatch(getInformacionObraArte(id));
-		dispatch(getPerfilUsuario(usuario.usuario_id));
-	}, [dispatch, id, usuario]);
-
-	console.log(usuario);
-	console.log(obra);
+		dispatch(getPerfilUsuario(usuario_id));
+	}, [dispatch, id, usuario_id]);
 
 	var date = new Date(obra.oa_fechaCreacion);
 	const formatDate = (date) => {
@@ -36,8 +35,8 @@ export const InformacionObraArte = () => {
 					<div className={styles.containerHeader}>
 						<Link to={`/usuario/${obra.usuario_id}`} className={styles.link}>
 							<Avatar
-								alt={'Foto de perfil de ' + usuario.usuario_name}
-								src={usuario.usuario_imagen}
+								alt={'Foto de perfil de ' + usuario_name}
+								src={usuario_imagen}
 								sx={{ width: 50, height: 50 }}
 							></Avatar>
 						</Link>
