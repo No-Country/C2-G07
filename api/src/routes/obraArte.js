@@ -54,7 +54,7 @@ router.get("/obraArteUsuario", async (req, res, next) => {
   }
 });
 
-router.post("/obraArte", autorizacion,async (req, res, next) => {
+router.post("/obraArte", async (req, res, next) => {
   try {
     const {
       oa_name,
@@ -85,7 +85,7 @@ router.post("/obraArte", autorizacion,async (req, res, next) => {
   }
 });
 
-router.put("/obraArte/:oa_id", autorizacion, async (req, res, next) => {
+router.put("/obraArte/:oa_id",  async (req, res, next) => {
   const { oa_id } = req.params;
   const { oa_name, oa_descripcion, oa_fechaCreacion, oa_imagen_obra, cat_id } =
     req.body;
@@ -108,7 +108,7 @@ router.put("/obraArte/:oa_id", autorizacion, async (req, res, next) => {
   }
 });
 
-router.delete("/:oa_id", autorizacion, async (req, res, next) => {
+router.delete("/:oa_id", async (req, res, next) => {
   const { oa_id } = req.params;
   const oaDelete = await ObraArte.findOne({ ioa_id: oa_id });
   if (oaDelete) {

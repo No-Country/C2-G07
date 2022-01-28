@@ -17,6 +17,8 @@ export const SearchBar = () => {
   useEffect(() => {
     if (obra) {
       dispatch(getObrasArtesName(obra));
+    }else{
+      dispatch(getObrasArtes('asc'))
     }
   }, [dispatch, obra]);
 
