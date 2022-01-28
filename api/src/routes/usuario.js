@@ -87,7 +87,7 @@ router.delete("/:usuario_id", async (req, res, next) => {
   }
 });
 
-router.put("/usuario/:usuario_id", autorizacion, async (req, res, next) => {
+router.put("/usuario/:usuario_id", async (req, res, next) => {
   const { usuario_id } = req.params;
   const { name, imagen, telefono, facebook, instagram, paginaweb } = req.body;
 
