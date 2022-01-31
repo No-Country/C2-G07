@@ -29,6 +29,18 @@ nav {
 	gap: 1rem;
 }
 
+.link{
+	color:var(--color);
+}
+
+.link:visited{
+	color:var(--color);
+}
+
+.link:hover{
+	color:var(--color-contraste1);
+}
+
 ul li {
 	list-style: none;
 }

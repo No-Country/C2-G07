@@ -1,0 +1,68 @@
+.modal{
+    z-index: 100;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 80%);
+    display:grid;
+    place-content: center;
+    position: fixed;
+    animation: showModal .3s ease-in;
+}
+
+.container{
+    width: 90%;
+    height: 80%;
+    display:grid;
+    place-items: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border: orangered double 1px;
+    position:relative;
+    animation: popUpModal .3s step-end;
+}
+
+.btnClose{
+    border:  var(--color-contraste1) solid 1px;
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+
+.btnClose:hover{
+    border: red solid 1px;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+}
+
+.container >h3{
+    font-size: 28px;
+    letter-spacing: .5rem;
+}
+
+@keyframes showModal {
+    0%{
+        background-color: rgba(0, 0, 0, 0%);
+    }
+
+    100%{
+        background-color: rgba(0, 0, 0, 80%)
+    }
+}
+
+@keyframes popUpModal {
+    0%{
+        transform: scale(0)
+    }
+
+    90%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}

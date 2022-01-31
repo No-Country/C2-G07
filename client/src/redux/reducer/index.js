@@ -1,24 +1,76 @@
-import {GET_OBRAS_ARTES, GET_OBRAS_ARTES_NAME} from '../actions/index'
+import {
+	GET_OBRAS_ARTES,
+	GET_OBRAS_ARTES_NAME,
+	GET_PERFIL_USUARIO,
+	GET_OBRAS_USUARIO,
+	GET_INFORMACION_OBRA_ARTE,
+	GET_CATEGORIA,
+	GET_USUARIOS,
+	GET_OBRA_ARTES_LIKES,
+} from '../actions/index';
 
-const initalState = {
-    obraArtes:[]
+const initialState = {
+	obraArtes: [],
+	usuario: {},
+	obrasUsuario: [],
+	obraArte: {},
+	categorias: [],
+	usuarios: [],
 };
 
-export default function rootReducer(state = initalState, action){
-    if(action.type === GET_OBRAS_ARTES){
-        return{
-            ...state,
-            obraArtes: action.payload,
-        }
-    }
+export default function rootReducer(state = initialState, action = {}) {
+	if (action.type === GET_OBRAS_ARTES) {
+		return {
+			...state,
+			obraArtes: action.payload,
+		};
+	}
 
-    if (action.type === GET_OBRAS_ARTES_NAME) {
-        return {
-          ...state,
-          obraArtes: action.payload,
-        };
-      }
+	if (action.type === GET_OBRAS_ARTES_NAME) {
+		return {
+			...state,
+			obraArtes: action.payload,
+		};
+	}
 
+	if (action.type === GET_PERFIL_USUARIO) {
+		return {
+			...state,
+			usuario: action.payload,
+		};
+	}
 
-    return state
+	if (action.type === GET_OBRAS_USUARIO) {
+		return {
+			...state,
+			obrasUsuario: action.payload,
+		};
+	}
+
+	if (action.type === GET_USUARIOS) {
+		return {
+			...state,
+			usuarios: action.payload,
+		};
+	}
+	if (action.type === GET_INFORMACION_OBRA_ARTE) {
+		return {
+			...state,
+			obraArte: action.payload,
+		};
+	}
+	if (action.type === GET_CATEGORIA) {
+		return {
+			...state,
+			categorias: action.payload,
+		};
+	}
+	if (action.type === GET_OBRA_ARTES_LIKES) {
+		return {
+			...state,
+			obraArtes: action.payload,
+		};
+	}
+
+	return state;
 }

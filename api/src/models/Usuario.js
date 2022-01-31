@@ -17,17 +17,29 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    usuario_token: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     usuario_imagen: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     usuario_password:{
       type:DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+    },
+    usuario_telefono: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    usuario_facebook: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    usuario_instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    usuario_paginaweb: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   });
 };

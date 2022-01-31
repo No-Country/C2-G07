@@ -4,11 +4,14 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: white;
+	z-index: 1000;
+	background-color: #413f44;
+	color: black;
 	display: grid;
 	place-content: center;
 	animation: toggleMenu 0.3s ease-in-out;
 }
+
 .menuMobile ul {
 	display: flex;
 	flex-direction: column;
@@ -17,6 +20,15 @@
 
 ul li {
 	list-style: none;
+}
+
+.link {
+	color: rgb(255, 255, 255);
+	font-size: 1.6rem;
+}
+
+.link:active {
+	text-decoration: line-through;
 }
 
 .closeIcon {

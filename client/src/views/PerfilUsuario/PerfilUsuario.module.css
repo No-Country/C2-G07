@@ -1,0 +1,87 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  position:relative;
+}
+.gridObrasArte {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 60px;
+    justify-content: center;
+    margin-top: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .agregarImagen{
+    background-color:#7a7a7a3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    align-self: center;
+    width:109%;
+    height: 520px;
+    border: .5px solid var(--color-contraste1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.404);
+    
+  }
+
+  .linkContent{
+    font-size: 50px !important;
+    background-color: rgba(128, 128, 128, 0.335);
+    border-radius: 50%;
+    opacity: 100%;
+    box-shadow: 10px 10px 2px #000;
+    filter: sepia(50%);
+  }
+
+  .linkContent:hover{
+    filter:none;
+    color:var(--color-contraste1);
+  }
+
+  .containerInfo{
+    display : flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+
+  .contacto{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imagenPerfil{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    max-height: 200px;
+    border-radius: 50%;
+    border: 2px solid #fe9f02
+  }
+
+  .title{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 70px;
+  }
+
+  .editPerfil{
+    display: flex;
+    align-items: center;
+  }
+
+ .button{
+   border: 1px solid #fe9f02;
+   height: 30px;
+   width: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  border-radius: 5px;
+ }

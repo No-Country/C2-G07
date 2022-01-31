@@ -1,44 +1,79 @@
-<<<<<<< HEAD
-const Home = () => {
-	return <div>GALERIA</div>;
-};
-=======
-import {getObrasArtes} from '../../redux/actions/index'
-import { useEffect , useState} from 'react'
-import{ useSelector, useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Cards } from '../../components/card/Card';
-import styles from './Home.module.css'
->>>>>>> afa939d0e8eab8d7c821ad238096135d44f84aa8
+import { SearchBar } from '../../components/SearchBar/SearchBar';
+import ReactPaginate from 'react-paginate';
+import { getObrasArtes } from '../../redux/actions/index';
+import styles from './Home.module.css';
 
-export default function Home(){
-	const obrasArtes = useSelector((state) => state.obraArtes)
-	const [order, setOrder] = useState('asc')
-	const distpatch = useDispatch();
-	useEffect(() =>{
-		distpatch(getObrasArtes(order))
-	}, [distpatch,order])
+export default function Home() {
+	const obrasArtes = useSelector((state) => state.obraArtes);
+	// console.log(obrasArtes.usuario_name)
+	const initialState = {
+		order: 'asc',
+		page: 0,
+	};
 
-	console.log(obrasArtes)
+	const [homeState, setHomeState] = useState(initialState);
+	const { order, page } = homeState;
 
-	return(
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getObrasArtes(order));
+	}, [dispatch, order]);
+
+	const postsPorPagina = 9;
+	const pagesVisited = page * postsPorPagina;
+	const pageCount = Math.ceil(obrasArtes?.length / postsPorPagina);
+	const changePage = ({ selected }) => {
+		setHomeState({ ...homeState, page: selected });
+	};
+
+	return (
 		<div>
+			<h1 className={styles.title}>GALERIA</h1>
+			<SearchBar />
+			<ReactPaginate
+				previousLabel={'<'}
+				nextLabel={'>'}
+				pageCount={pageCount}
+				onPageChange={changePage}
+				containerClassName={styles.paginationBttns}
+				previousLinkClassName={styles.previousBttn}
+				nextLinkClassName={styles.nextBttn}
+				disabledClassName={styles.paginationDisabled}
+				activeClassName={styles.paginationActive}
+			/>
 			<ul className={styles.gridObrasArte}>
-				{obrasArtes.length>0?(
-					obrasArtes.map((oa, index)=>(
+				{obrasArtes
+					?.slice(pagesVisited, pagesVisited + postsPorPagina)
+					.map((oa, index) => (
 						<Cards
 							key={index}
+							id={oa.oa_id}
 							name={oa.oa_name}
-							descripcion={oa.oa_descripcion}
-							fecha={oa.oa_fechaCreacion}
+							resenia={oa.oa_resenia}
 							likes={oa.oa_likes}
 							imagen={oa.oa_imagen_obra}
-							imagenUsuario={oa.usuario.usuario_imagen}
-							nameAutor = {oa.usuario.usuario_name}
+							nameAutor={oa.usuario.usuario_name}
 							idUsuario={oa.usuario.usuario_id}
 						/>
-					))
-				):null}
+					))}
 			</ul>
+			<div className={styles.containerPaginate}>
+				<ReactPaginate
+					previousLabel={'<'}
+					nextLabel={'>'}
+					pageCount={pageCount}
+					onPageChange={changePage}
+					containerClassName={styles.paginationBttns}
+					previousLinkClassName={styles.previousBttn}
+					nextLinkClassName={styles.nextBttn}
+					disabledClassName={styles.paginationDisabled}
+					activeClassName={styles.paginationActive}
+				/>
+			</div>
 		</div>
-	)
+	);
 }
