@@ -8,16 +8,16 @@ import { Avatar } from '@mui/material';
 
 export const InformacionObraArte = () => {
 	const obra = useSelector((state) => state.obraArte);
-	const { usuario_id, usuario_name, usuario_imagen } = useSelector(
-		(state) => state.usuario
-	);
+	// const { usuario_id } = useSelector(
+	// 	(state) => state.usuario
+	// );
 	const dispatch = useDispatch();
 	const { id } = useParams();
 
 	useEffect(() => {
 		dispatch(getInformacionObraArte(id));
-		dispatch(getPerfilUsuario(usuario_id));
-	}, [dispatch, id, usuario_id]);
+		// dispatch(getPerfilUsuario(usuario_id));
+	}, [dispatch, id]);
 
 	var date = new Date(obra.oa_fechaCreacion);
 	const formatDate = (date) => {
@@ -33,13 +33,13 @@ export const InformacionObraArte = () => {
 				</div>
 				<div className={styles.container}>
 					<div className={styles.containerHeader}>
-						<Link to={`/usuario/${obra.usuario_id}`} className={styles.link}>
+						{/* <Link to={`/usuario/${obra.usuario_id}`} className={styles.link}>
 							<Avatar
 								alt={'Foto de perfil de ' + usuario_name}
 								src={usuario_imagen}
 								sx={{ width: 50, height: 50 }}
 							></Avatar>
-						</Link>
+						</Link> */}
 						<h2>{obra.oa_name}</h2>
 						<h4>{formatDate(date)}</h4>
 					</div>
@@ -47,7 +47,7 @@ export const InformacionObraArte = () => {
 				<div className={styles.containerInfo}>
 					<p className={styles.titles}>Descripción:</p>
 					<p className={styles.description}>{obra.oa_descripcion}</p>
-					<p className={styles.titles}>Categoria: {obra.category.cat_descripcion}</p>
+					<p className={styles.titles}>Categoria: fotografia</p>
 				</div>
 			</div>
 		</div>

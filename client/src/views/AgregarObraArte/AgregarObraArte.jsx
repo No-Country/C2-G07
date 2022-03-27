@@ -41,7 +41,7 @@ export const AgregarObraArte = () => {
     oa_descripcion: "",
     oa_fechaCreacion: "",
     cat_id: 0,
-    usuario_id: "ae1063a9-71e5-4f3d-a149-b8ed5d3b1652",
+    usuario_id: "1bc4da3e-5a94-4aa1-acde-c41d9ed6db3d",
   });
   const dispatch = useDispatch();
   let categorias = useSelector((state) => state.categorias);
