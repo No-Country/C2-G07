@@ -72,7 +72,7 @@ export const Cards = ({
               onClick={() => handleLike()}
             />
           )}
-          <p>{like}</p>
+          <p>{likes}</p>
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
