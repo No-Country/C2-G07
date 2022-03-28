@@ -80,7 +80,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 100,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://imagenes.20minutos.es/files/image_656_370/uploads/imagenes/2015/05/12/223736.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -112,7 +112,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 110,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -128,7 +128,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 80,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -144,7 +144,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 150,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -160,7 +160,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 130,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -176,7 +176,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 110,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://www.dzoom.org.es/wp-content/uploads/2017/07/seebensee-2384369-810x540.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -208,7 +208,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 1,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -224,7 +224,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 1,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -256,7 +256,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 10,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://i0.wp.com/wokii.com/wp-content/uploads/2020/12/new-project-6-3.jpg?fit=1081%2C700&ssl=1",
       usuario_id: usuario[0].usuario_id,
@@ -288,7 +288,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 300,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -304,7 +304,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 981,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[1].usuario_id,
@@ -320,7 +320,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 600,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -336,7 +336,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 510,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://elordenmundial.com/wp-content/uploads/2017/05/Monte-Fuji-1024x660.jpg",
       usuario_id: usuario[1].usuario_id,
@@ -352,7 +352,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 13,
+      oa_likes: 0,
       oa_imagen_obra:
         "http://augustomoreno.com/wp-content/uploads/2014/01/escultura-contemporanea-augusto-moreno-cascamorras.jpg",
       usuario_id: usuario[1].usuario_id,
@@ -368,7 +368,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 88,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -384,7 +384,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 21,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
@@ -400,7 +400,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 63,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
       usuario_id: usuario[1].usuario_id,
@@ -416,7 +416,7 @@ async function createData() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper tortor magna, quis malesuada enim viverra ac. Nam vel felis gravida, convallis massa a, dictum odio. Ut vehicula, lacus eget tempor commodo, massa elit lacinia lacus, sed rutrum erat augue nec sapien.",
       oa_fechaCreacion: "01-05-1998",
       oa_oculto: false,
-      oa_likes: 20,
+      oa_likes: 0,
       oa_imagen_obra:
         "https://cdn2.chicmagazine.com.mx/uploads/media/2020/07/29/gogh-pinturas-obras-famosas-foto.jpg",
       usuario_id: usuario[0].usuario_id,
